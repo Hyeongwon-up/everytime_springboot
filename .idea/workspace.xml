@@ -5,51 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd36c0df-c21a-4152-8d0d-a9580fa69933" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/.idea/google-java-format.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/HELP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/board.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/BoardApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/comment/api/CommentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/comment/dto/CommentGetDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/comment/dto/CommentPostDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/comment/dto/CommentPutDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/comment/entity/Comment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/comment/repository/CommentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/comment/repository/CommentRepositorySupport.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/comment/repository/CommentRepositorySupportImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/comment/service/CommentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/config/ModelMapperConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/config/QuerydslConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/config/SpringFoxConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/global/ModelMapperUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/global/code/BoardEnumerable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/global/code/YnCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/global/entity/BaseTimeEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/post/api/PostController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/post/dao/PostRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/post/dao/PostRepositorySupport.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/post/dto/PostGetDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/post/dto/PostPostDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/post/dto/PostPutDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/post/entity/Post.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/java/kr/airi/ojt/board/post/service/PostService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/main/resources/infra_db.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/everytime_springboot/src/test/java/kr/airi/ojt/board/BoardApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h3yon.md" beforeDir="false" afterPath="$PROJECT_DIR$/h3yon.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +43,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1tpmqyWgwyX01R71v14WzBUHfZx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -103,6 +63,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
     <configuration name="ToyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -125,6 +86,7 @@
       <workItem from="1623476565866" duration="496000" />
       <workItem from="1623478242944" duration="6075000" />
       <workItem from="1623489168658" duration="8356000" />
+      <workItem from="1623559532509" duration="643000" />
     </task>
     <servers />
   </component>
