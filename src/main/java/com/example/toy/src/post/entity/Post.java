@@ -1,6 +1,7 @@
 package com.example.toy.src.post.entity;
 
 import lombok.*;
+import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.*;
 
@@ -9,6 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@DynamicInsert
 @Table(name = "post")
 public class Post {
 
@@ -20,7 +22,6 @@ public class Post {
     @NonNull
     @Column(name = "post_title")
     private String title;
-//    @Column(name = "height", length = 20)
 
     @NonNull
     @Column(name = "post_content")
@@ -34,21 +35,11 @@ public class Post {
     @Column(name = "user_idx")
     private Long user_idx;
 
-    @NonNull
     @Column(name = "is_blind", columnDefinition = "tinyint default 1")
     private Byte is_blind;
 
-    @NonNull
     @Column(name = "status", columnDefinition = "tinyint default 1")
     private Byte status;
-
-    @PrePersist
-    public void prePersist() {
-        this.is_blind =
-                this.is_blind == null ? 1 : this.is_blind;
-        this.status =
-                this.status == null ? 1 : this.status;
-    }
 
 
     public void update(String title, String content){

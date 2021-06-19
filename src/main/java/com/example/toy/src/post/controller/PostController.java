@@ -16,7 +16,7 @@ public class PostController {
     private PostPostReqDto postPostReqDto;
 
     @PostMapping("/post")
-    public String create(PostPostReqDto postPostReqDto){
+    public String create(@RequestBody PostPostReqDto postPostReqDto){
         String tmp = postService.createPost(postPostReqDto);
         return tmp;
     }
