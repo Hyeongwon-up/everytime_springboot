@@ -21,7 +21,7 @@ import static com.example.toy.config.BaseResponseStatus.INVALID_TOKEN;
 @Service
 public class JwtService {
 
-    public String createJwt(long user_idx){
+    public static String createJwt(long user_idx){ //static??
         Date now = new Date();
         return Jwts.builder()
                 .claim("user_idx", user_idx)
