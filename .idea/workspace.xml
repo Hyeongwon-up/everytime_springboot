@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd36c0df-c21a-4152-8d0d-a9580fa69933" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/config/QuerydslConfig.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/repository/PostRepositorySupport.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/repository/PostRepositorySupportImpl.java" afterDir="false" />
@@ -45,6 +46,11 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/dto/PostUserReqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/dto/PostUserReqDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/utils/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/utils/JwtService.java" afterDir="false" />
+>>>>>>> b49a1c81c1b4191e33919fa3c24a3f9f7c605052
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,6 +298,7 @@
       <workItem from="1623559532509" duration="1576000" />
       <workItem from="1623749530493" duration="68000" />
       <workItem from="1624028423106" duration="11390000" />
+      <workItem from="1624079385577" duration="1276000" />
     </task>
     <servers />
   </component>
@@ -309,6 +316,7 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+<<<<<<< HEAD
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="?" />
@@ -324,5 +332,7 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+=======
+>>>>>>> b49a1c81c1b4191e33919fa3c24a3f9f7c605052
   </component>
 </project>
