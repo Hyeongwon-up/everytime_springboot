@@ -1,9 +1,13 @@
 package com.example.toy.src.post.entity;
 
+import com.example.toy.src.user.entity.User;
+import com.sun.istack.NotNull;
 import lombok.*;
 import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -19,27 +23,30 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NonNull
     @Column(name = "post_title")
+    @NotNull
     private String title;
 
-    @NonNull
     @Column(name = "post_content")
     private String content;
 
-    @NonNull
+
     @Column(name = "board_idx")
     private Long board_idx;
-
-    @NonNull
-    @Column(name = "user_idx")
-    private Long user_idx;
 
     @Column(name = "is_blind", columnDefinition = "tinyint default 1")
     private Byte is_blind;
 
     @Column(name = "status", columnDefinition = "tinyint default 1")
     private Byte status;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name ="user_idx")//FK
+    @NotNull
+    private User user;
+
+//    @OneToMany(mappedBy = "post",cascade = CascadeType.ALL)
+//    private List<Post> postList = new ArrayList<>();
 
 
     public void update(String title, String content){

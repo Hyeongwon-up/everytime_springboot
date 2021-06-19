@@ -6,6 +6,7 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class PostUserReqDto {
+
     private Long user_idx;
     private String user_id;
     private String password;
