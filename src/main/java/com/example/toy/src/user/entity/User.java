@@ -1,10 +1,13 @@
 package com.example.toy.src.user.entity;
 
 import com.example.toy.config.BaseEntity;
+import com.example.toy.src.post.entity.Post;
 import lombok.*;
 import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -54,6 +57,11 @@ public class User extends BaseEntity {
 
     @Column(name = "status", columnDefinition = "tinyint default 1")
     private Byte status;
+
+    @OneToMany(mappedBy = "user")
+    private List<Post> postList = new ArrayList<>();
+
+
 
 //    @OneToMany(mappedBy = "user",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
 //    @JsonManagedReference("post_user_id")

@@ -11,5 +11,19 @@
         <property name="serverTimezone" value="Asia/Seoul" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="board@localhost" uuid="5bd3c4e5-7cae-44a2-a9d6-cea62bec5cfd">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:13306/board</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="board@docker" uuid="66c9ccb2-f9f5-4b54-9f2a-1c0236491bba">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:13306/board</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

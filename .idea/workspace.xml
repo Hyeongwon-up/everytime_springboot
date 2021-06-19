@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd36c0df-c21a-4152-8d0d-a9580fa69933" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.idea/modules/toy.querydsl.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/config/QuerydslConfig.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/repository/PostQueryRepository.java" afterDir="false" />
+=======
+<<<<<<< HEAD
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/config/QuerydslConfig.java" afterDir="false" />
+>>>>>>> 0df0fd999509b3cd851d54900e112238fc1c2694
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/repository/PostRepositorySupport.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/repository/PostRepositorySupportImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.bin" afterDir="false" />
@@ -22,6 +27,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+>>>>>>> 0df0fd999509b3cd851d54900e112238fc1c2694
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/controller/PostController.class" afterDir="false" />
@@ -30,7 +40,15 @@
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/entity/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/entity/Post.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/repository/PostRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/repository/PostRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/service/PostService.class" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/example/toy/ToyApplicationTests.class" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/dto/PostUserReqDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/dto/PostUserReqDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/entity/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/entity/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.yml" afterDir="false" />
+>>>>>>> 0df0fd999509b3cd851d54900e112238fc1c2694
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/source-classes-mapping.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/controller/PostController.java" afterDir="false" />
@@ -38,6 +56,18 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/entity/Post.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/repository/PostRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/service/PostService.java" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/dto/PostUserReqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/dto/PostUserReqDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/utils/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/utils/JwtService.java" afterDir="false" />
+>>>>>>> b49a1c81c1b4191e33919fa3c24a3f9f7c605052
+>>>>>>> 0df0fd999509b3cd851d54900e112238fc1c2694
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +109,20 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="querydsl" type="c8890929:TasksNode$1" />
               </path>
+<<<<<<< HEAD
+=======
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="toy" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="toy" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+>>>>>>> 0df0fd999509b3cd851d54900e112238fc1c2694
             </expand>
             <select />
           </tree_state>
@@ -95,6 +139,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -104,6 +153,31 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="h3yon" />
+                    <option name="lastUsedInstant" value="1624080223" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1624080222" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="ProjectId" id="1tpmqyWgwyX01R71v14WzBUHfZx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -138,6 +212,7 @@
       <recent name="com.example.toy.src.post.entity" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="gradle clean" />
@@ -145,6 +220,23 @@
   </component>
   <component name="RunManager" selected="Spring Boot.ToyApplication">
     <configuration name="toy [cleanQuerydslSourcesDir]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+=======
+  <component name="RunManager" selected="Spring Boot.ToyApplication">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="everytime_springboot [cleanQuerydslSourcesDir]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+>>>>>>> 0df0fd999509b3cd851d54900e112238fc1c2694
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -165,6 +257,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="toy [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -187,6 +280,9 @@
       <method v="2" />
     </configuration>
     <configuration name="toy [initQuerydslSourcesDir]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+=======
+    <configuration name="everytime_springboot [initQuerydslSourcesDir]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+>>>>>>> 0df0fd999509b3cd851d54900e112238fc1c2694
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -207,7 +303,11 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="toy [querydslClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+=======
+    <configuration name="everytime_springboot [querydslClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+>>>>>>> 0df0fd999509b3cd851d54900e112238fc1c2694
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -237,10 +337,16 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Gradle.toy [initQuerydslSourcesDir]" />
         <item itemvalue="Gradle.toy [cleanQuerydslSourcesDir]" />
         <item itemvalue="Gradle.toy [querydslClasses]" />
         <item itemvalue="Gradle.toy [clean]" />
+=======
+        <item itemvalue="Gradle.everytime_springboot [querydslClasses]" />
+        <item itemvalue="Gradle.everytime_springboot [initQuerydslSourcesDir]" />
+        <item itemvalue="Gradle.everytime_springboot [cleanQuerydslSourcesDir]" />
+>>>>>>> 0df0fd999509b3cd851d54900e112238fc1c2694
       </list>
     </recent_temporary>
   </component>
@@ -259,11 +365,15 @@
       <workItem from="1623559532509" duration="1576000" />
       <workItem from="1623749530493" duration="68000" />
       <workItem from="1624028423106" duration="11390000" />
+<<<<<<< HEAD
       <workItem from="1624079385577" duration="2777000" />
       <workItem from="1624082433358" duration="5991000" />
       <workItem from="1624089503170" duration="1385000" />
       <workItem from="1624090967712" duration="450000" />
       <workItem from="1624111194452" duration="5000" />
+=======
+      <workItem from="1624079385577" duration="1276000" />
+>>>>>>> 0df0fd999509b3cd851d54900e112238fc1c2694
     </task>
     <servers />
   </component>
@@ -293,5 +403,26 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="?" />
+    <option name="LAST_COMMIT_MESSAGE" value="?" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/build.gradle</url>
+          <line>58</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+=======
+>>>>>>> b49a1c81c1b4191e33919fa3c24a3f9f7c605052
+>>>>>>> 0df0fd999509b3cd851d54900e112238fc1c2694
   </component>
 </project>

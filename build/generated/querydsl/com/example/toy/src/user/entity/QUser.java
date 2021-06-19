@@ -7,6 +7,7 @@ import com.querydsl.core.types.dsl.*;
 import com.querydsl.core.types.PathMetadata;
 import javax.annotation.Generated;
 import com.querydsl.core.types.Path;
+import com.querydsl.core.types.dsl.PathInits;
 
 
 /**
@@ -29,6 +30,8 @@ public class QUser extends EntityPathBase<User> {
     public final StringPath password = createString("password");
 
     public final StringPath phone_num = createString("phone_num");
+
+    public final ListPath<com.example.toy.src.post.entity.Post, com.example.toy.src.post.entity.QPost> postList = this.<com.example.toy.src.post.entity.Post, com.example.toy.src.post.entity.QPost>createList("postList", com.example.toy.src.post.entity.Post.class, com.example.toy.src.post.entity.QPost.class, PathInits.DIRECT2);
 
     public final NumberPath<Byte> status = createNumber("status", Byte.class);
 

@@ -3,6 +3,8 @@ package com.example.toy.src.post.service;
 import com.example.toy.src.post.dto.PostPostReqDto;
 import com.example.toy.src.post.entity.Post;
 import com.example.toy.src.post.repository.PostRepository;
+import com.example.toy.src.user.entity.User;
+import com.example.toy.src.user.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,18 +16,22 @@ public class PostService {
 
     @Autowired
     private PostRepository postRepository;
+    @Autowired
+    UserRepository userRepository;
 
     @Transactional
     public  String createPost(PostPostReqDto postPostReqDto){
 
+        User user = userRepository.findById(postPostReqDto.getUser_idx()).get();
+
+        System.out.println("find user");
         Post post = Post.builder()
                 .title(postPostReqDto.getTitle())
                 .content(postPostReqDto.getContent())
-                .board_idx(postPostReqDto.getBoard_idx())
-                .user_idx(postPostReqDto.getUser_idx())
-                .is_blind(postPostReqDto.getIs_blind())
-                .status(postPostReqDto.getStatus())
+                .user(user)
                 .build();
+
+        System.out.println("service finish &*");
 
         postRepository.save(post);
 

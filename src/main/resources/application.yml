@@ -15,6 +15,16 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/board
+    url: jdbc:mysql://localhost:13306/board
     username: root
-    password: Rkdgmldbs@9
+    password: password
+
+
+  logging:
+    level:
+      org.hibernate:
+        SQL: DEBUG # to logger
+        type.descriptor.sql.BasicBinder: TRACE
+      org.springframework.jdbc.core:
+        JdbcTemplate: DEBUG
+        StatementCreatorUtils: TRACE
