@@ -3,10 +3,12 @@ package com.example.toy.src.post.service;
 import com.example.toy.src.post.dto.PostPostReqDto;
 import com.example.toy.src.post.entity.Post;
 import com.example.toy.src.post.repository.PostRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+@Slf4j
 @Service
 public class PostService {
 
@@ -27,6 +29,8 @@ public class PostService {
 
         postRepository.save(post);
 
+
+        log.debug("userIdx", postPostReqDto.getUser_idx());
         return "Success";
 
     }

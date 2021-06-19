@@ -2,10 +2,14 @@ package com.example.toy.src.post.controller;
 
 import com.example.toy.src.post.dto.PostPostReqDto;
 import com.example.toy.src.post.entity.Post;
+import com.example.toy.src.post.repository.PostRepository;
 import com.example.toy.src.post.service.PostService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
+
 
 @RestController
 @Slf4j //로그
@@ -14,6 +18,8 @@ public class PostController {
     @Autowired
     private PostService postService;
     private PostPostReqDto postPostReqDto;
+    @Autowired
+    private PostRepository postRepository;
 
     @PostMapping("/post")
     public String create(@RequestBody PostPostReqDto postPostReqDto){
@@ -41,6 +47,11 @@ public class PostController {
     public String delete(@PathVariable Long id){
         postService.delete(id);
         return "deleted";
+    }
+
+    @GetMapping("/get3")
+    public Optional<Post> test(Long postId){
+        return postRepository.findById2(postId);
     }
 }
 

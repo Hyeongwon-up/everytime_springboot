@@ -1,5 +1,6 @@
 package com.example.toy.src.post.dto;
 
+import com.example.toy.src.user.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

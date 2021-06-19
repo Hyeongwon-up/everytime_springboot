@@ -1,5 +1,6 @@
 package com.example.toy.src.post.entity;
 
+import com.example.toy.src.user.entity.User;
 import lombok.*;
 import org.hibernate.annotations.DynamicInsert;
 
@@ -31,8 +32,9 @@ public class Post {
     @Column(name = "board_idx")
     private Long board_idx;
 
-    @NonNull
     @Column(name = "user_idx")
+//    @ManyToOne
+//    @JoinColumn(name = "user_idx")
     private Long user_idx;
 
     @Column(name = "is_blind", columnDefinition = "tinyint default 1")
