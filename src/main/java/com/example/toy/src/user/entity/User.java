@@ -16,7 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 @DynamicInsert
 @Table(name="user")
-public class User extends BaseEntity {
+public class  User extends BaseEntity {
 
     @Id
     @Column(name = "user_idx")

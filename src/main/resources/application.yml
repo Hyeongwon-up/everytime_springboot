@@ -1,5 +1,7 @@
-spring:
+server:
+  port: 8880
 
+spring:
   jpa:
     generate-ddl: true
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
@@ -15,9 +17,9 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:13306/board
+    url: jdbc:mysql://localhost:33306/everyTime
     username: root
-    password: password
+    password: root
 
 
   logging:
