@@ -21,8 +21,8 @@ com/example/toy/src/post/controller/PostController.java
  com.example.toy.src.post.controller.PostController
 com/example/toy/src/user/dto/PostUserReqDto.java
  com.example.toy.src.user.dto.PostUserReqDto
-com/example/toy/config/swaggerConfig.java
- com.example.toy.config.swaggerConfig
+com/example/toy/config/webSocket/ChatHandler.java
+ com.example.toy.config.webSocket.ChatHandler
 com/example/toy/src/post/repository/PostRepositorySupportImpl.java
  com.example.toy.src.post.repository.PostRepositorySupportImpl
 com/example/toy/config/BaseEntity.java
@@ -31,8 +31,8 @@ com/example/toy/src/user/service/UserService.java
  com.example.toy.src.user.service.UserService
 com/example/toy/src/user/controller/UserController.java
  com.example.toy.src.user.controller.UserController
-com/example/toy/src/chat/ChatController.java
- com.example.toy.src.chat.ChatController
+com/example/toy/src/post/dto/PostPostReqDto.java
+ com.example.toy.src.post.dto.PostPostReqDto
 com/example/toy/src/user/entity/QUser.java
  com.example.toy.src.user.entity.QUser
 com/example/toy/config/BaseResponse.java
@@ -45,17 +45,25 @@ com/example/toy/config/BaseException.java
  com.example.toy.config.BaseException
 com/example/toy/src/post/entity/QPost.java
  com.example.toy.src.post.entity.QPost
-com/example/toy/config/QuerydslConfig.java
- com.example.toy.config.QuerydslConfig
+com/example/toy/config/webSocket/WebSocketConfig.java
+ com.example.toy.config.webSocket.WebSocketConfig
 com/example/toy/config/BaseResponseStatus.java
  com.example.toy.config.BaseResponseStatus
 com/example/toy/src/post/repository/PostRepositorySupport.java
  com.example.toy.src.post.repository.PostRepositorySupport
 com/example/toy/utils/AES128.java
  com.example.toy.utils.AES128
-com/example/toy/src/post/dto/PostPostReqDto.java
- com.example.toy.src.post.dto.PostPostReqDto
-com/example/toy/config/webSocket/WebSocketConfig.java
- com.example.toy.config.webSocket.WebSocketConfig
-com/example/toy/config/webSocket/ChatHandler.java
- com.example.toy.config.webSocket.ChatHandler
+com/example/toy/src/chat/controller/ChatController.java
+ com.example.toy.src.chat.controller.ChatController
+com/example/toy/src/chat/dto/ChatMessage.java
+ com.example.toy.src.chat.dto.ChatMessage
+ com.example.toy.src.chat.dto.ChatMessage$MessageType
+com/example/toy/src/chat/service/ChatService.java
+ com.example.toy.src.chat.service.ChatService
+com/example/toy/src/chat/ChatRoom.java
+ com.example.toy.src.chat.ChatRoom
+ com.example.toy.src.chat.ChatRoom$ChatRoomBuilder
+com/example/toy/config/swaggerConfig.java
+ com.example.toy.config.swaggerConfig
+com/example/toy/config/QuerydslConfig.java
+ com.example.toy.config.QuerydslConfig
