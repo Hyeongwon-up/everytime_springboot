@@ -16,45 +16,45 @@ import java.util.Optional;
 @Slf4j //로그
 public class PostController {
 
-    @Autowired
-    private PostService postService;
-    @Autowired
-    PostRepository postRepository;
-    private PostPostReqDto postPostReqDto;
+  @Autowired
+  private PostService postService;
+  @Autowired
+  PostRepository postRepository;
+  private PostPostReqDto postPostReqDto;
 
-    @PostMapping("/post")
-    @ApiOperation(value = "게시글 생성")
-    public String create(@RequestBody PostPostReqDto postPostReqDto){
-        String tmp = postService.createPost(postPostReqDto);
-        return tmp;
-    }
+  @PostMapping("/post")
+  @ApiOperation(value = "게시글 생성")
+  public String create(@RequestBody PostPostReqDto postPostReqDto) {
+    String tmp = postService.createPost(postPostReqDto);
+    return tmp;
+  }
 
-    @GetMapping("/get/{id}")
-    public Post find(@PathVariable Long id){
-        return postService.findPost(id);
-    }
+  @GetMapping("/get/{id}")
+  public Post find(@PathVariable Long id) {
+    return postService.findPost(id);
+  }
 
-    @GetMapping("/get2")
-    public Post findByTitle(String title){
+  @GetMapping("/get2")
+  public Post findByTitle(String title) {
 //        log.debug(title);
-        return postService.findPostByTitle(title);
-    }
+    return postService.findPostByTitle(title);
+  }
 
-    @PutMapping("/put/{id}")
-    public Post modifyTitle(@PathVariable Long id, String title, String content){
-        return postService.modify(id, title, content);
-    }
+  @PutMapping("/put/{id}")
+  public Post modifyTitle(@PathVariable Long id, String title, String content) {
+    return postService.modify(id, title, content);
+  }
 
-    @DeleteMapping("/delete/{id}")
-    public String delete(@PathVariable Long id){
-        postService.delete(id);
-        return "deleted";
-    }
+  @DeleteMapping("/delete/{id}")
+  public String delete(@PathVariable Long id) {
+    postService.delete(id);
+    return "deleted";
+  }
 
-    @GetMapping("/test")
-    public Optional<Post> test(Long postId) {
-        log.debug("go");
-        return postRepository.findById2(postId);
-    }
+  @GetMapping("/test")
+  public Optional<Post> test(Long postId) {
+    log.debug("go");
+    return postRepository.findById2(postId);
+  }
 }
 

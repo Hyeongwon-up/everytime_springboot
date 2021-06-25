@@ -11,34 +11,34 @@ import java.util.Optional;
 
 @Slf4j
 public class PostRepositorySupportImpl
-        extends QuerydslRepositorySupport implements PostRepositorySupport {
+  extends QuerydslRepositorySupport implements PostRepositorySupport {
 
-    private final JPAQueryFactory jpaQueryFactory;
-    QPost post = QPost.post;
+  private final JPAQueryFactory jpaQueryFactory;
+  QPost post = QPost.post;
 
-    public PostRepositorySupportImpl(final JPAQueryFactory jpaQueryFactory) {
-        super(Post.class);
-        this.jpaQueryFactory = jpaQueryFactory;
-    }
+  public PostRepositorySupportImpl(final JPAQueryFactory jpaQueryFactory) {
+    super(Post.class);
+    this.jpaQueryFactory = jpaQueryFactory;
+  }
 
-    @Override
-    public List<Post> findPostOrderBydesc() {
-        log.debug("finish");
+  @Override
+  public List<Post> findPostOrderBydesc() {
+    log.debug("finish");
 
-        return jpaQueryFactory.selectFrom(post)
-                .orderBy(post.id.desc())
-                .fetch();
-    }
+    return jpaQueryFactory.selectFrom(post)
+      .orderBy(post.id.desc())
+      .fetch();
+  }
 
-    @Override
-    public Optional<Post> findById2(Long postId) {
-        return Optional.of(jpaQueryFactory
-                .select(post)
-                .from(post)
-                .where(post.id.eq(postId))
-                .fetchOne()
-        );
-    }
+  @Override
+  public Optional<Post> findById2(Long postId) {
+    return Optional.of(jpaQueryFactory
+      .select(post)
+      .from(post)
+      .where(post.id.eq(postId))
+      .fetchOne()
+    );
+  }
 
 
 }

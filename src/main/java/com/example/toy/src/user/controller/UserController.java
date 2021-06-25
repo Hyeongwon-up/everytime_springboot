@@ -2,7 +2,9 @@ package com.example.toy.src.user.controller;
 
 import com.example.toy.config.BaseException;
 import com.example.toy.config.BaseResponse;
+
 import static com.example.toy.config.BaseResponseStatus.*;
+
 import com.example.toy.src.user.dto.PostUserReqDto;
 import com.example.toy.src.user.dto.SignUpReqDto;
 import com.example.toy.src.user.service.UserService;
@@ -21,24 +23,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/users")
 public class UserController {
 
-    @Autowired
-    private UserService userService;
-    private PostUserReqDto postUserReqDto;
-    private JwtService jwtService;
+  @Autowired
+  private UserService userService;
+  private PostUserReqDto postUserReqDto;
+  private JwtService jwtService;
 
-    @PostMapping("")
-    public BaseResponse<String> createUser(@RequestBody PostUserReqDto postUserReqDto) throws BaseException {
-        String tmp = userService.createUser(postUserReqDto);
-        return new BaseResponse<>(SUCCESS, tmp);
-    }
+  @PostMapping("")
+  public BaseResponse<String> createUser(@RequestBody PostUserReqDto postUserReqDto) throws BaseException {
+    String tmp = userService.createUser(postUserReqDto);
+    return new BaseResponse<>(SUCCESS, tmp);
+  }
 //
 //    @PostMapping("/registration")
 //    public ResponseEntity<SignUpReqDto> signUp(@RequestBody final SignUpReqDto signUpReqDto) {
 //
 //
 //    }
-
-
 
 
 }

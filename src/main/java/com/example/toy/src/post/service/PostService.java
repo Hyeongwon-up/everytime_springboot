@@ -14,59 +14,59 @@ import org.springframework.transaction.annotation.Transactional;
 @Slf4j
 public class PostService {
 
-    @Autowired
-    private PostRepository postRepository;
-    @Autowired
-    UserRepository userRepository;
+  @Autowired
+  private PostRepository postRepository;
+  @Autowired
+  UserRepository userRepository;
 
-    @Transactional
-    public  String createPost(PostPostReqDto postPostReqDto){
+  @Transactional
+  public String createPost(PostPostReqDto postPostReqDto) {
 
-        User user = userRepository.findById(postPostReqDto.getUser_idx()).get();
+    User user = userRepository.findById(postPostReqDto.getUser_idx()).get();
 
-        System.out.println("find user");
-        Post post = Post.builder()
-                .title(postPostReqDto.getTitle())
-                .content(postPostReqDto.getContent())
-                .user(user)
-                .build();
+    System.out.println("find user");
+    Post post = Post.builder()
+      .title(postPostReqDto.getTitle())
+      .content(postPostReqDto.getContent())
+      .user(user)
+      .build();
 
-        System.out.println("service finish &*");
+    System.out.println("service finish &*");
 
-        postRepository.save(post);
+    postRepository.save(post);
 
-        return "Success";
+    return "Success";
 
-    }
+  }
 
-    //불러오기만 할 수 있게
-    @Transactional(readOnly = true)
-    public Post findPost(Long id){
-        Post finded = postRepository.findById(id).get();
-        //.orElseThrow(() => new Exception(error));능
-        //
-        return finded;
-    }
+  //불러오기만 할 수 있게
+  @Transactional(readOnly = true)
+  public Post findPost(Long id) {
+    Post finded = postRepository.findById(id).get();
+    //.orElseThrow(() => new Exception(error));능
+    //
+    return finded;
+  }
 
-    @Transactional(readOnly = true)
-    public Post findPostByTitle(String title){
-        Post finded2 = postRepository.findPostByTitle(title).get();
-        return finded2;
-    }
+  @Transactional(readOnly = true)
+  public Post findPostByTitle(String title) {
+    Post finded2 = postRepository.findPostByTitle(title).get();
+    return finded2;
+  }
 
-    @Transactional
-    public Post modify(Long id, String title, String content){
-        Post before = postRepository.findById(id).get();
+  @Transactional
+  public Post modify(Long id, String title, String content) {
+    Post before = postRepository.findById(id).get();
 
-        before.update(title, content);
+    before.update(title, content);
 
-        return postRepository.save(before);
+    return postRepository.save(before);
 
-    }
+  }
 
-    @Transactional
-    public void delete(Long id){
-        postRepository.deleteById(id);
-    }
+  @Transactional
+  public void delete(Long id) {
+    postRepository.deleteById(id);
+  }
 
 }

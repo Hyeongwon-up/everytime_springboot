@@ -11,7 +11,7 @@ import java.util.Optional;
 @Repository
 public interface PostRepositorySupport {
 
-    List<Post> findPostOrderBydesc();
+  List<Post> findPostOrderBydesc();
 
-    Optional<Post> findById2(Long postId);
+  Optional<Post> findById2(Long postId);
 }

@@ -8,6 +8,7 @@ import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
+import org.w3c.dom.Text;
 
 @Component
 @Slf4j
@@ -19,10 +20,12 @@ public class ChatHandler extends TextWebSocketHandler {
   protected void handleTextMessage(WebSocketSession webSocketSession, TextMessage message) throws Exception {
     String payload = message.getPayload();
     log.info("payload: {}", payload);
-
-    for(WebSocketSession session : webSocketSessionList) {
-      session.sendMessage(message);
-    }
+    TextMessage textMessage = new TextMessage("형우너쓰");
+    webSocketSession.sendMessage(textMessage);
+//
+//    for (WebSocketSession session : webSocketSessionList) {
+//      session.sendMessage(message);
+//    }
   }
 
 

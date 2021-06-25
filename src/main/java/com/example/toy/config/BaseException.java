@@ -6,5 +6,6 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class BaseException extends Exception {
-    private BaseResponseStatus status;
+
+  private BaseResponseStatus status;
 }
