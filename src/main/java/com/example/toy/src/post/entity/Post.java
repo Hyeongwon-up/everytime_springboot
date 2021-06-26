@@ -48,7 +48,6 @@ public class Post {
 //    @OneToMany(mappedBy = "post",cascade = CascadeType.ALL)
 //    private List<Post> postList = new ArrayList<>();
 
-
   public void update(String title, String content) {
     this.title = title;
     this.content = content;
