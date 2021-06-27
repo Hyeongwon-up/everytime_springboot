@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @Slf4j
 public class MessageService {
@@ -15,18 +17,20 @@ public class MessageService {
   @Autowired
   private MessageRoomRepository messageRoomRepository;
 
-  public void createMessageRoom(MessageRoomCreateDto messageRoomCreateDto){
-
+  public MessageRoomCreateDto createMessageRoom(MessageRoomCreateDto messageRoomCreateDto){
     log.info("service start : {},{}", messageRoomCreateDto.getReceiverId(), messageRoomCreateDto.getSenderId());
-
     MessageRoom messageRoom =
       MessageRoom.builder()
         .receiver(messageRoomCreateDto.getReceiverId())
         .sender(messageRoomCreateDto.getSenderId())
         .build();
-
-    messageRoomRepository.save(messageRoom);
     log.debug("success create room : {}", messageRoom.getId());
+    messageRoomRepository.save(messageRoom);
+    return messageRoomCreateDto;
+  }
+
+  public List<MessageRoom> readMessageRoomList(Long userId){
+      return messageRoomRepository.readMessageRoomList(userId);
   }
 
 }

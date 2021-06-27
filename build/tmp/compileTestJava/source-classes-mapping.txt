@@ -1,2 +1,0 @@
-com/example/toy/ToyApplicationTests.java
- com.example.toy.ToyApplicationTests

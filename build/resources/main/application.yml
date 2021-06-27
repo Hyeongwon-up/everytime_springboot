@@ -6,7 +6,7 @@ spring:
     generate-ddl: true
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
 
   #    properties:
   #      hibernate:
@@ -17,9 +17,9 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:33306/everyTime
+    url: jdbc:mysql://localhost:13306/everyTime
     username: root
-    password: root
+    password: password
 
 
   logging:

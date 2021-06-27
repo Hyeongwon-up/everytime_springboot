@@ -4,6 +4,8 @@ import com.example.toy.config.BaseException;
 import com.example.toy.config.BaseResponseStatus;
 import com.example.toy.config.secret.Secret;
 import com.example.toy.src.user.dto.PostUserReqDto;
+import com.example.toy.src.user.dto.SignUpReqDto;
+import com.example.toy.src.user.dto.SignUpResDto;
 import com.example.toy.src.user.entity.User;
 import com.example.toy.src.user.repository.UserRepository;
 //import com.example.toy.utils.JwtService;
@@ -14,7 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class UserService {
+public class UserService<PostUserResDto> {
 //    private final JwtService jwtService;
 
   @Autowired
@@ -28,7 +30,6 @@ public class UserService {
 //        encodingPassword = new AES128(Secret.USER_INFO_PASSWORD_KEY).encrypt(postUserReqDto.getPassword());
 
     User user = User.builder()
-      .user_idx(postUserReqDto.getUser_idx())
       .user_id(postUserReqDto.getUser_id())
       .password(postUserReqDto.getPassword())
 //                .password(encodingPassword)
@@ -50,5 +51,27 @@ public class UserService {
     }
 
     return accessToken;
+  }
+
+  public SignUpResDto registration(SignUpReqDto signUpReqDto) {
+    User user = User.builder()
+            .user_id(signUpReqDto.getUser_id())
+            .password(signUpReqDto.getPassword())
+            .univ_idx(signUpReqDto.getUniv_idx())
+            .univ_year(signUpReqDto.getUniv_year())
+            .nickname(signUpReqDto.getNickname())
+            .user_name(signUpReqDto.getUser_name())
+            .user_email(signUpReqDto.getUser_email())
+            .phone_num(signUpReqDto.getPhone_num())
+            .status(signUpReqDto.getStatus())
+            .build();
+
+    userRepository.save(user);
+
+    SignUpResDto signUpResDto = SignUpResDto.builder()
+            .user_name(signUpReqDto.getUser_name())
+            .build();
+
+    return signUpResDto;
   }
 }

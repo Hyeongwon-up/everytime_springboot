@@ -1,9 +1,9 @@
 plugins {
     id 'org.springframework.boot' version '2.5.1'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
     id 'java'
 
-    id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
 
 }
 
