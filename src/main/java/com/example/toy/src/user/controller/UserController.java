@@ -8,6 +8,8 @@ import static com.example.toy.config.BaseResponseStatus.*;
 import com.example.toy.config.BaseResponseStatus;
 import com.example.toy.src.user.dto.LoginReqDto;
 import com.example.toy.src.user.dto.PostUserReqDto;
+import com.example.toy.src.user.dto.SignUpReqDto;
+import com.example.toy.src.user.dto.SignUpResDto;
 import com.example.toy.src.user.service.UserService;
 import com.example.toy.utils.JwtService;
 import io.swagger.annotations.ApiOperation;
@@ -30,7 +32,6 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-    @Autowired
     private JwtService jwtService;
 
     @PostMapping("/users")
@@ -62,5 +63,12 @@ public class UserController {
 
         return new BaseResponse<>(SUCCESS, tokenUserId);
     }
+
+
+    @PostMapping("/registration")
+    public ResponseEntity<SignUpResDto> signUp(@RequestBody final SignUpReqDto signUpReqDto) {
+        return ResponseEntity.ok(userService.registration(signUpReqDto));
+    }
+
 
 }

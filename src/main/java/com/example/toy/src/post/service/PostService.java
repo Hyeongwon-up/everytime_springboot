@@ -10,65 +10,63 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Slf4j
 @Service
+@Slf4j
 public class PostService {
 
-    @Autowired
-    private PostRepository postRepository;
-    @Autowired
-    private UserRepository userRepository;
+  @Autowired
+  private PostRepository postRepository;
+  @Autowired
+  UserRepository userRepository;
 
-    @Transactional
-    public String createPost(PostPostReqDto postPostReqDto){
+  @Transactional
+  public String createPost(PostPostReqDto postPostReqDto) {
 
-        User user = userRepository.findById(postPostReqDto.getUser_idx()).get();
+    User user = userRepository.findById(postPostReqDto.getUser_idx()).get();
 
-        System.out.println("find user");
-        Post post = Post.builder()
-                .title(postPostReqDto.getTitle())
-                .content(postPostReqDto.getContent())
-                .user(user)
-                .build();
+    System.out.println("find user");
+    Post post = Post.builder()
+      .title(postPostReqDto.getTitle())
+      .content(postPostReqDto.getContent())
+      .user(user)
+      .build();
 
-        System.out.println("service finish &*");
+    System.out.println("service finish &*");
 
-        postRepository.save(post);
+    postRepository.save(post);
 
+    return "Success";
 
-        log.debug("userIdx", postPostReqDto.getUser_idx());
-        return "Success";
+  }
 
-    }
+  //불러오기만 할 수 있게
+  @Transactional(readOnly = true)
+  public Post findPost(Long id) {
+    Post finded = postRepository.findById(id).get();
+    //.orElseThrow(() => new Exception(error));능
+    //
+    return finded;
+  }
 
-    //불러오기만 할 수 있게
-    @Transactional(readOnly = true)
-    public Post findPost(Long post_idx){
-        Post finded = postRepository.findById(post_idx).get();
-        //.orElseThrow(() => new Exception(error));능
-        //
-        return finded;
-    }
+  @Transactional(readOnly = true)
+  public Post findPostByTitle(String title) {
+    Post finded2 = postRepository.findPostByTitle(title).get();
+    return finded2;
+  }
 
-    @Transactional(readOnly = true)
-    public Post findPostByTitle(String title){
-        Post finded2 = postRepository.findPostByTitle(title).get();
-        return finded2;
-    }
+  @Transactional
+  public Post modify(Long id, String title, String content) {
+    Post before = postRepository.findById(id).get();
 
-    @Transactional
-    public Post modify(Long post_idx, String title, String content){
-        Post before = postRepository.findById(post_idx).get();
+    before.update(title, content);
 
-        before.update(title, content);
+    return postRepository.save(before);
 
-        return postRepository.save(before);
+  }
 
-    }
-
-    @Transactional
-    public void delete(Long post_idx){
-        postRepository.deleteById(post_idx);
-    }
+  @Transactional
+  public void delete(Long id) {
+    postRepository.deleteById(id);
+  }
 
 }

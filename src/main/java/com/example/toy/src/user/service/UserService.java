@@ -3,14 +3,15 @@ package com.example.toy.src.user.service;
 import com.example.toy.config.BaseException;
 import com.example.toy.config.BaseResponseStatus;
 import com.example.toy.config.secret.Secret;
-//import com.example.toy.src.post.entity.Post;
 import com.example.toy.src.user.dto.LoginReqDto;
 import com.example.toy.src.user.dto.PostUserReqDto;
+import com.example.toy.src.user.dto.SignUpReqDto;
+import com.example.toy.src.user.dto.SignUpResDto;
 import com.example.toy.src.user.entity.User;
 import com.example.toy.src.user.repository.UserRepository;
+//import com.example.toy.utils.JwtService;
 import com.example.toy.utils.AES128;
 import com.example.toy.utils.JwtService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,21 +22,15 @@ import javax.crypto.NoSuchPaddingException;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
-
-import static com.example.toy.config.secret.Secret.JWT_SECRET_KEY;
-
 import static com.example.toy.config.BaseResponseStatus.*;
 
 
 @Service
-public class UserService {
+public class UserService<PostUserResDto> {
 
     @Autowired
     private UserRepository userRepository;
-
     private JwtService jwtService;
-//    private AES128 aes128 = new AES128(JWT_SECRET_KEY);
-
 
     @Transactional
     public String createUser(PostUserReqDto postUserReqDto) throws BaseException, InvalidAlgorithmParameterException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException {
@@ -65,6 +60,28 @@ public class UserService {
 
         String accessToken = jwtService.createJwt(user.getUser_idx());
         return accessToken;
+    }
+
+    public SignUpResDto registration(SignUpReqDto signUpReqDto) {
+        User user = User.builder()
+                .id(signUpReqDto.getUser_id())
+                .password(signUpReqDto.getPassword())
+                .univ_idx(signUpReqDto.getUniv_idx())
+                .univ_year(signUpReqDto.getUniv_year())
+                .nickname(signUpReqDto.getNickname())
+                .user_name(signUpReqDto.getUser_name())
+                .user_email(signUpReqDto.getUser_email())
+                .phone_num(signUpReqDto.getPhone_num())
+                .status(signUpReqDto.getStatus())
+                .build();
+
+        userRepository.save(user);
+
+        SignUpResDto signUpResDto = SignUpResDto.builder()
+                .user_name(signUpReqDto.getUser_name())
+                .build();
+
+        return signUpResDto;
     }
 
 

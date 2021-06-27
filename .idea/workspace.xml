@@ -5,7 +5,217 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad0ab045-9a21-44a1-b922-4e94434d262d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/config/webSocket/ChatHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/config/webSocket/WebSocketConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/chat/ChatRoom$ChatRoomBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/chat/ChatRoom.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/chat/controller/ChatController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/chat/dto/ChatMessage$MessageType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/chat/dto/ChatMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/chat/service/ChatService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/message/controller/MessageController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/message/dto/MessageRoomCreateDto$MessageRoomCreateDtoBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/message/dto/MessageRoomCreateDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/message/dto/MessageRoomCreateResDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/message/entity/Message$MessageBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/message/entity/Message.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/message/entity/MessageRoom$MessageRoomBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/message/entity/MessageRoom.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/message/entity/QMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/message/entity/QMessageRoom.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/message/repository/MessageRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/message/repository/MessageRoomRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/message/repository/MessageRoomRepositorySupport.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/message/repository/MessageRoomRepositorySupportImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/message/service/MessageService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/dto/SignUpReqDto$SignUpReqDtoBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/dto/SignUpReqDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/querydsl/com/example/toy/src/message/entity/QMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/querydsl/com/example/toy/src/message/entity/QMessageRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/ToyApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/config/BaseEntity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/config/BaseException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/config/BaseResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/config/BaseResponseStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/config/QBaseEntity.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/config/QuerydslConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/config/secret/Secret.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/config/swaggerConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/config/webSocket/ChatHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/config/webSocket/WebSocketConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/chat/ChatRoom$ChatRoomBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/chat/ChatRoom.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/chat/controller/ChatController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/chat/dto/ChatMessage$MessageType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/chat/dto/ChatMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/chat/service/ChatService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/controller/MessageController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/dto/MessageRoomCreateDto$MessageRoomCreateDtoBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/dto/MessageRoomCreateDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/dto/MessageRoomCreateResDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/entity/Message$MessageBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/entity/Message.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/entity/MessageRoom$MessageRoomBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/entity/MessageRoom.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/entity/QMessage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/entity/QMessageRoom.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/repository/MessageRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/repository/MessageRoomRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/repository/MessageRoomRepositorySupport.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/repository/MessageRoomRepositorySupportImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/service/MessageService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/post/controller/PostController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/post/dto/PostPostReqDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/post/entity/Post$PostBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/post/entity/Post.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/post/entity/QPost.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/post/repository/PostRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/post/repository/PostRepositorySupport.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/post/repository/PostRepositorySupportImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/post/service/PostService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/user/controller/UserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/user/dto/PostUserReqDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/user/dto/SignUpReqDto$SignUpReqDtoBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/user/dto/SignUpReqDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/user/dto/SignUpResDto$SignUpResDtoBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/user/dto/SignUpResDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/user/entity/QUser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/user/entity/User$UserBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/user/entity/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/user/repository/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/user/service/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/utils/AES128.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/utils/JwtService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/config/webSocket/ChatHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/config/webSocket/WebSocketConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/chat/ChatRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/chat/controller/ChatController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/chat/dto/ChatMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/chat/service/ChatService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/controller/MessageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/dto/MessageRoomCreateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/dto/MessageRoomCreateResDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/entity/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/entity/MessageRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/repository/MessageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/repository/MessageRoomRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/repository/MessageRoomRepositorySupport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/repository/MessageRoomRepositorySupportImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/service/MessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/dto/SignUpReqDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/dto/SignUpResDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/66c9ccb2-f9f5-4b54-9f2a-1c0236491bba.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/66c9ccb2-f9f5-4b54-9f2a-1c0236491bba.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/ToyApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/ToyApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/config/BaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/config/BaseEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/config/BaseException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/config/BaseException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/config/BaseResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/config/BaseResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/config/BaseResponseStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/config/BaseResponseStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/config/QuerydslConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/config/QuerydslConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/config/secret/Secret.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/config/secret/Secret.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/config/swaggerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/config/swaggerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/board/controller/BoardController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/board/dto/PostBoardReqDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/board/entity/Board$BoardBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/board/entity/Board.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/board/entity/QBoard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/board/repository/BoardRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/board/repository/BoardRepositorySupport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/board/repository/BoardRepositorySupportImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/board/service/BoardService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/controller/CommentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/dto/PostCommentReqDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/dto/PostCommentResDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/entity/Comment$CommentBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/entity/Comment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/entity/QComment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/repository/CommentQueryRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/repository/CommentRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/repository/CommentRepositorySupport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/repository/CommentRepositorySupportImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/service/CommentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/controller/PostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/dto/PostPostReqDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/dto/PostPostReqDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/entity/Post$PostBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/entity/Post$PostBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/entity/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/entity/Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/entity/QPost.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/entity/QPost.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/repository/PostQueryRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/repository/PostRepositorySupportImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/repository/PostRepositorySupportImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/post/service/PostService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/dto/LoginReqDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/dto/PostUserReqDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/dto/PostUserReqDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/entity/QUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/entity/QUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/entity/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/entity/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/user/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/utils/AES128.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/utils/AES128.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/utils/JwtService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/utils/JwtService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/querydsl/com/example/toy/src/board/entity/QBoard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/querydsl/com/example/toy/src/comment/entity/QComment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/querydsl/com/example/toy/src/post/entity/QPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/querydsl/com/example/toy/src/post/entity/QPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/querydsl/com/example/toy/src/user/entity/QUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/querydsl/com/example/toy/src/user/entity/QUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileQuerydslJava/source-classes-mapping.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h3yon.md" beforeDir="false" afterPath="$PROJECT_DIR$/h3yon.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/ToyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/ToyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/config/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/config/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/config/BaseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/config/BaseException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/config/BaseResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/config/BaseResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/config/BaseResponseStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/config/BaseResponseStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/config/QuerydslConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/config/QuerydslConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/config/secret/Secret.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/config/secret/Secret.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/config/swaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/config/swaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/board/controller/BoardController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/board/dto/PostBoardReqDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/board/entity/Board.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/board/repository/BoardRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/board/repository/BoardRepositorySupport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/board/repository/BoardRepositorySupportImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/board/service/BoardService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/controller/CommentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/dto/PostCommentReqDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/dto/PostCommentResDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/entity/Comment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/repository/CommentQueryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/repository/CommentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/repository/CommentRepositorySupport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/repository/CommentRepositorySupportImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/service/CommentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/dto/PostPostReqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/dto/PostPostReqDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/entity/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/repository/PostQueryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/repository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/repository/PostRepositorySupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/repository/PostRepositorySupport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/repository/PostRepositorySupportImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/repository/PostRepositorySupportImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/post/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/dto/LoginReqDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/dto/PostUserReqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/dto/PostUserReqDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/utils/AES128.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/utils/AES128.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/utils/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/utils/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/toy/ToyApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/toy/ToyApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +226,23 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="toy" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,12 +269,14 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -58,7 +287,53 @@
       <recent name="com.example.toy.src.comment.repository" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle clean" />
+      <command value="gradle " />
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ToyApplication">
+    <configuration name="toy [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="toy" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="ToyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="toy.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.toy.ToyApplication" />
@@ -66,6 +341,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.toy" />
+        <item itemvalue="Gradle.toy [clean]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -80,7 +361,8 @@
       <workItem from="1624423733575" duration="841000" />
       <workItem from="1624650259523" duration="23454000" />
       <workItem from="1624716209332" duration="8566000" />
-      <workItem from="1624775886741" duration="310000" />
+      <workItem from="1624775886741" duration="2397000" />
+      <workItem from="1624778403793" duration="592000" />
     </task>
     <servers />
   </component>
@@ -98,7 +380,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="h3yon" />
                       </list>
                     </value>
                   </entry>

@@ -9,7 +9,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,44 +16,45 @@ import java.util.Optional;
 @Slf4j //로그
 public class PostController {
 
-    @Autowired
-    private PostService postService;
-    @Autowired
-    private PostRepository postRepository;
+  @Autowired
+  private PostService postService;
+  @Autowired
+  PostRepository postRepository;
+  private PostPostReqDto postPostReqDto;
 
-    @PostMapping("/post")
-    @ApiOperation(value = "게시글 생성")
-    public String create(@RequestBody PostPostReqDto postPostReqDto){
-        String tmp = postService.createPost(postPostReqDto);
-        return tmp;
-    }
+  @PostMapping("/post")
+  @ApiOperation(value = "게시글 생성")
+  public String create(@RequestBody PostPostReqDto postPostReqDto) {
+    String tmp = postService.createPost(postPostReqDto);
+    return tmp;
+  }
 
-    @GetMapping("/get/{post_idx}")
-    public Post find(@PathVariable Long post_idx){
-        return postService.findPost(post_idx);
-    }
+  @GetMapping("/get/{id}")
+  public Post find(@PathVariable Long id) {
+    return postService.findPost(id);
+  }
 
-    @GetMapping("/get2")
-    public Post findByTitle(String title){
+  @GetMapping("/get2")
+  public Post findByTitle(String title) {
 //        log.debug(title);
-        return postService.findPostByTitle(title);
-    }
+    return postService.findPostByTitle(title);
+  }
 
-    @PutMapping("/put/{post_idx}")
-    public Post modifyTitle(@PathVariable Long post_idx, String title, String content){
-        return postService.modify(post_idx, title, content);
-    }
+  @PutMapping("/put/{id}")
+  public Post modifyTitle(@PathVariable Long id, String title, String content) {
+    return postService.modify(id, title, content);
+  }
 
-    @DeleteMapping("/delete/{post_idx}")
-    public String delete(@PathVariable Long post_idx){
-        postService.delete(post_idx);
-        return "deleted";
-    }
+  @DeleteMapping("/delete/{id}")
+  public String delete(@PathVariable Long id) {
+    postService.delete(id);
+    return "deleted";
+  }
 
-    @GetMapping("/test")
-    public Optional<Post> test(Long postId) {
-        log.debug("go");
-        return postRepository.findById2(postId);
-    }
+  @GetMapping("/test")
+  public Optional<Post> test(Long postId) {
+    log.debug("go");
+    return postRepository.findById2(postId);
+  }
 }
 

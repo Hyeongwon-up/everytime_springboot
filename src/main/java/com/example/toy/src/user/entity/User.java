@@ -1,7 +1,7 @@
 package com.example.toy.src.user.entity;
 
 import com.example.toy.config.BaseEntity;
-//import com.example.toy.src.post.entity.Post;
+import com.example.toy.src.post.entity.Post;
 import lombok.*;
 import org.hibernate.annotations.DynamicInsert;
 
@@ -15,52 +15,55 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @DynamicInsert
-@Table(name="user")
+@Table(name = "user")
 public class User extends BaseEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long user_idx; // 유저 인덱스
+  @Id
+  @Column(name = "user_idx")
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long user_idx;
 
-    @NonNull
-    @Column(name = "id") // 유저 아이디
-    private String id;
+  @NonNull
+  @Column(name = "user_id") // 아이디
+  private String id;
 
-    @NonNull
-    @Column(name = "password")
-    private String password;
+  @NonNull
+  @Column(name = "password")
+  private String password;
 
-    @NonNull
-    @Column(name = "univ_idx")
-    private Integer univ_idx;
+  @NonNull
+  @Column(name = "univ_idx")
+  private Integer univ_idx;
 
-    @NonNull
-    @Column(name = "univ_year")
-    private Integer univ_year;
+  @NonNull
+  @Column(name = "univ_year")
+  private Integer univ_year;
 
-    @NonNull
-    @Column(name = "nickname")
-    private String nickname;
+  @NonNull
+  @Column(name = "nickname")
+  private String nickname;
 
-    @NonNull
-    @Column(name = "user_name")
-    private String user_name;
+  @NonNull
+  @Column(name = "user_name")
+  private String user_name;
 
-    @NonNull
-    @Column(name = "user_email")
-    private String user_email;
+  @NonNull
+  @Column(name = "user_email")
+  private String user_email;
 
-    @NonNull
-    @Column(name = "phone_num")
-    private String phone_num;
+  @NonNull
+  @Column(name = "phone_num")
+  private String phone_num;
 
-    @Column(name = "status", columnDefinition = "tinyint default 1")
-    private Byte status;
+  @Column(name = "status", columnDefinition = "tinyint default 1")
+  private Byte status;
 
-//    @OneToMany(mappedBy = "user")
-//    private List<Post> postList = new ArrayList<>();
+  @OneToMany(mappedBy = "user")
+  private List<Post> postList = new ArrayList<>();
 
 //    @OneToMany(mappedBy = "user",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
 //    @JsonManagedReference("post_user_id")
 //    private List<Post> posts??????;
+
+
 }

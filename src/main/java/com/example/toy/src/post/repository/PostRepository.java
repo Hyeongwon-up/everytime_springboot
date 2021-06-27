@@ -9,8 +9,8 @@ import java.util.Optional;
 @Repository
 public interface PostRepository extends JpaRepository<Post, Long>, PostRepositorySupport {
 
-    Optional<Post> findPostByTitle(String title);
-    //Optional -> 에러 메시지 처리 가능
+  Optional<Post> findPostByTitle(String title);
+  //Optional -> 에러 메시지 처리 가능
 
 //    Post findByContent
 
