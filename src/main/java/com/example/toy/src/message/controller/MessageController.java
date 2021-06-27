@@ -35,7 +35,8 @@ public class MessageController {
 
   @GetMapping("/messageroom/{id}")
   @ApiOperation(value = "userId로 메세지함 불러오기")
-  public List<MessageRoom> readMessageRoomList(@PathVariable Long userId) {
-      return messageService.readMessageRoomList(userId);
+  public List<MessageRoom> readMessageRoom(@PathVariable Long id) {
+    log.info("controller start : {} 로 찾기!!!", id);
+      return messageService.readMessageRoomList(id);
   }
 }

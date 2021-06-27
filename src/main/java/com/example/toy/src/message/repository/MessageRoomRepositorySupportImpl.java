@@ -18,13 +18,20 @@ public class MessageRoomRepositorySupportImpl implements MessageRoomRepositorySu
         this.jpaQueryFactory = jpaQueryFactory;
     }
 
+
     @Override
     public List<MessageRoom> readMessageRoomList(Long userId) {
 
-        return jpaQueryFactory
-                .select(messageRoom)
-                .where(messageRoom.sender.eq(userId).or(messageRoom.receiver.eq(userId)))
-                .fetch();
+        log.info("query start!!!!");
 
+        List<MessageRoom> tmp =
+                jpaQueryFactory
+                        .selectFrom(messageRoom)
+                        .where(messageRoom.sender.eq(userId).or(messageRoom.receiver.eq(userId)))
+                        .fetch();
+
+        log.info("query result : {} ", tmp.stream().toArray());
+
+        return tmp;
     }
 }

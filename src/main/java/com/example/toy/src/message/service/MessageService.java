@@ -30,6 +30,8 @@ public class MessageService {
   }
 
   public List<MessageRoom> readMessageRoomList(Long userId){
+
+    log.info("service start!!!1");
       return messageRoomRepository.readMessageRoomList(userId);
   }
 
