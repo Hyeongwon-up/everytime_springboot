@@ -24,20 +24,21 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/users")
 public class UserController {
 
-  @Autowired
-  private UserService userService;
-  private PostUserReqDto postUserReqDto;
-  private JwtService jwtService;
+    @Autowired
+    private UserService userService;
+    private PostUserReqDto postUserReqDto;
+    private JwtService jwtService;
 
-  @PostMapping("")
-  public BaseResponse<String> createUser(@RequestBody PostUserReqDto postUserReqDto) throws BaseException {
-    String tmp = userService.createUser(postUserReqDto);
-    return new BaseResponse<>(SUCCESS, tmp);
-  }
+    //희윤님꺼
+    @PostMapping("")
+    public BaseResponse<String> createUser(@RequestBody PostUserReqDto postUserReqDto) throws BaseException {
+        String tmp = userService.createUser(postUserReqDto);
+        return new BaseResponse<>(SUCCESS, tmp);
+    }
 
     @PostMapping("/registration")
     public ResponseEntity<SignUpResDto> signUp(@RequestBody final SignUpReqDto signUpReqDto) {
-      return ResponseEntity.ok(userService.registration(signUpReqDto));
+        return ResponseEntity.ok(userService.registration(signUpReqDto));
     }
 
 
