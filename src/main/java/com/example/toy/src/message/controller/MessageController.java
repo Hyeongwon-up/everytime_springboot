@@ -2,6 +2,7 @@ package com.example.toy.src.message.controller;
 
 
 import com.example.toy.src.message.dto.MessageRoomCreateDto;
+import com.example.toy.src.message.entity.Message;
 import com.example.toy.src.message.entity.MessageRoom;
 import com.example.toy.src.message.service.MessageService;
 import io.swagger.annotations.Api;
@@ -38,5 +39,15 @@ public class MessageController {
   public List<MessageRoom> readMessageRoom(@PathVariable Long id) {
     log.info("controller start : {} 로 찾기!!!", id);
       return messageService.readMessageRoomList(id);
+  }
+
+
+  /**
+   * 메세지 보내깅~
+   */
+  @PostMapping("/{userId}")
+  @ApiOperation("메세지 보내기")
+  public ResponseEntity<Message> sendMessage(@PathVariable(value = "userId") Long fromId, Long toId){
+
   }
 }

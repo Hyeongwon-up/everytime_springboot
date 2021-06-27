@@ -1,11 +1,13 @@
 package com.example.toy.src.message.repository;
 
+import com.example.toy.src.message.entity.Message;
 import com.example.toy.src.message.entity.MessageRoom;
 import com.example.toy.src.message.entity.QMessageRoom;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 public class MessageRoomRepositorySupportImpl implements MessageRoomRepositorySupport {
@@ -24,14 +26,34 @@ public class MessageRoomRepositorySupportImpl implements MessageRoomRepositorySu
 
         log.info("query start!!!!");
 
-        List<MessageRoom> tmp =
+        List<MessageRoom> messageRoomList =
                 jpaQueryFactory
                         .selectFrom(messageRoom)
                         .where(messageRoom.sender.eq(userId).or(messageRoom.receiver.eq(userId)))
                         .fetch();
 
-        log.info("query result : {} ", tmp.stream().toArray());
+        log.info("query result : {} ", messageRoomList.stream().toArray());
 
-        return tmp;
+        return messageRoomList;
     }
+
+    @Override
+    public Optional<MessageRoom> findByBetweenUser(Long from, Long to) {
+
+        log.info("***** findByFromAndTo Query START *****");
+
+        MessageRoom findMessageRoom =
+                jpaQueryFactory
+                .selectFrom(messageRoom)
+                .where((messageRoom.sender.eq(from)
+                        .and(messageRoom.receiver.eq(to)))
+                        .or((messageRoom.sender.eq(to)
+                                .and(messageRoom.receiver.eq(from)))))
+                .fetchOne();
+
+
+        return Optional.of(findMessageRoom);
+    }
+
+
 }
