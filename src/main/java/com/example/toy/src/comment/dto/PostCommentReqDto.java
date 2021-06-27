@@ -7,7 +7,8 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class PostCommentReqDto {
-    private String cmt_content;
-    private Long post_idx;
-    private Byte is_blind;
+    private String content;
+    private Long postIdx;
+    private Long replyIdx;
+    private Byte isBlind;
 }

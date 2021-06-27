@@ -22,17 +22,19 @@ public class QComment extends EntityPathBase<Comment> {
 
     public static final QComment comment = new QComment("comment");
 
-    public final StringPath cmt_content = createString("cmt_content");
+    public final StringPath content = createString("content");
 
-    public final NumberPath<Long> cmt_idx = createNumber("cmt_idx", Long.class);
+    public final NumberPath<Long> idx = createNumber("idx", Long.class);
 
-    public final NumberPath<Byte> is_blind = createNumber("is_blind", Byte.class);
+    public final NumberPath<Byte> isBlind = createNumber("isBlind", Byte.class);
 
     public final com.example.toy.src.post.entity.QPost post;
 
+    public final NumberPath<Long> replyIdx = createNumber("replyIdx", Long.class);
+
     public final NumberPath<Byte> status = createNumber("status", Byte.class);
 
-    public final NumberPath<Long> user_idx = createNumber("user_idx", Long.class);
+    public final NumberPath<Long> userIdx = createNumber("userIdx", Long.class);
 
     public QComment(String variable) {
         this(Comment.class, forVariable(variable), INITS);

@@ -13,29 +13,33 @@ import java.util.List;
 @Entity
 @Getter
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-@DynamicInsert
+@NoArgsConstructor
 @Table(name = "comment")
 public class Comment {
 
     @Id
+    @Column(name = "cmt_idx")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long cmt_idx;
+    private Long idx;
 
     @NonNull
-    private String cmt_content;
+    @Column(name = "cmt_content")
+    private String content;
 
-    private Long user_idx;
+    @NonNull
+    private Long userIdx;
 
     @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name ="post_idx")
-    @NotNull
     private Post post;
 
+    @Column(name = "reply_idx", columnDefinition = "bigint default 0") // 대댓글의 대상(댓글 = cmt_idx)
+    private Long replyIdx;
+
     @Column(columnDefinition = "tinyint default 0")
-    private Byte is_blind;
+    private Byte isBlind;
 
     @Column(columnDefinition = "tinyint default 1")
     private Byte status;

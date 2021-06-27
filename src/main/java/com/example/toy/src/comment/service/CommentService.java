@@ -1,5 +1,7 @@
 package com.example.toy.src.comment.service;
 
+import com.example.toy.config.BaseException;
+import com.example.toy.src.comment.dto.GetAllCommentDto;
 import com.example.toy.src.comment.dto.GetCommentResDto;
 import com.example.toy.src.comment.dto.PostCommentReqDto;
 import com.example.toy.src.comment.entity.Comment;
@@ -12,6 +14,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+import static com.example.toy.config.BaseResponseStatus.*;
+
 @Service
 public class CommentService {
 
@@ -21,15 +25,33 @@ public class CommentService {
     PostRepository postRepository;
 
     @Transactional
-    public String createComment(Long userIdx, PostCommentReqDto postCommentReqDto){
+    public String createComment(Long userIdx, PostCommentReqDto postCommentReqDto) throws BaseException {
 
-        Post post = postRepository.findById(postCommentReqDto.getPost_idx()).get();
+        Post post;
+        long replyIdx;
+
+        if(postCommentReqDto.getPostIdx() != null && postCommentReqDto.getPostIdx() > 0){
+            // 댓글일 경우
+            post = postRepository.findById(postCommentReqDto.getPostIdx()).get();
+            replyIdx = 0;
+        } else if(postCommentReqDto.getReplyIdx() != null && postCommentReqDto.getReplyIdx() > 0) {
+            // 대댓글일 경우
+            if (!commentRepository.existsById(postCommentReqDto.getReplyIdx())) {
+                throw new BaseException(NOT_EXIST_COMMENT);
+            }
+            Comment findedComment = commentRepository.findCommentByIdx(postCommentReqDto.getReplyIdx()).get();
+            post = findedComment.getPost();
+            replyIdx = postCommentReqDto.getReplyIdx();
+        }else {
+            throw new BaseException(NOT_ENTERED_COMMENT);
+        }
 
         Comment comment = Comment.builder()
-                .cmt_content(postCommentReqDto.getCmt_content())
-                .user_idx(userIdx)
+                .content(postCommentReqDto.getContent())
+                .userIdx(userIdx)
                 .post(post)
-                .is_blind(postCommentReqDto.getIs_blind())
+                .replyIdx(replyIdx)
+                .isBlind(postCommentReqDto.getIsBlind())
                 .build();
 
         commentRepository.save(comment);
@@ -37,8 +59,13 @@ public class CommentService {
         return "Success";
     }
 
-    public List<GetCommentResDto> findCommentByUser_idx(Long user_idx){
-        List<GetCommentResDto> commentList = commentRepository.findCommentsByUser_idx(user_idx);
+    public List<GetCommentResDto> findCommentByUserIdx(Long userIdx){
+        List<GetCommentResDto> commentList = commentRepository.findCommentByUserIdx(userIdx);
+        return commentList;
+    }
+
+    public List<GetAllCommentDto> getAllCommentsByPostIdx(Long postIdx){
+        List<GetAllCommentDto> commentList = commentRepository.findAllByPostIdx(postIdx);
         return commentList;
     }
 
