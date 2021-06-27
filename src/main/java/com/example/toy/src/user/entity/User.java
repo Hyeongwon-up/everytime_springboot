@@ -1,7 +1,7 @@
 package com.example.toy.src.user.entity;
 
 import com.example.toy.config.BaseEntity;
-import com.example.toy.src.post.entity.Post;
+//import com.example.toy.src.post.entity.Post;
 import lombok.*;
 import org.hibernate.annotations.DynamicInsert;
 
@@ -19,13 +19,12 @@ import java.util.List;
 public class User extends BaseEntity {
 
     @Id
-    @Column(name = "user_idx")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long user_idx;
+    private Long user_idx; // 유저 인덱스
 
     @NonNull
-    @Column(name = "user_id") // 아이디
-    private String user_id;
+    @Column(name = "id") // 유저 아이디
+    private String id;
 
     @NonNull
     @Column(name = "password")
@@ -58,14 +57,10 @@ public class User extends BaseEntity {
     @Column(name = "status", columnDefinition = "tinyint default 1")
     private Byte status;
 
-    @OneToMany(mappedBy = "user")
-    private List<Post> postList = new ArrayList<>();
-
-
+//    @OneToMany(mappedBy = "user")
+//    private List<Post> postList = new ArrayList<>();
 
 //    @OneToMany(mappedBy = "user",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
 //    @JsonManagedReference("post_user_id")
 //    private List<Post> posts??????;
-
-
 }

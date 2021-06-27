@@ -6,11 +6,19 @@ import lombok.Getter;
 public enum BaseResponseStatus { //enum!!! 알아오기
     // 1000: 요청 성공
     SUCCESS(true, 1000, "요청에 성공하였습니다."),
+    SUCCESS_SIGN_UP(true, 1000, "회원가입에 성공하였습니다."),
+    SUCCESS_LOGIN(true, 1000, "로그인에 성공하였습니다."),
 
     // 2000 : Request 오류
     FAIL(false, 2000, "요청에 실패하였습니다."),
-    EMPTY_JWT(false, 2010, "JWT를 입력해주세요."),
-    INVALID_TOKEN(false, 2011, "유효하지 않은 토큰입니다."),
+    OVERLAPPED_ID_FAIL(false, 2001, "중복된 아이디입니다."),
+    OVERLAPPED_NICKNAME_FAIL(false, 2002, "중복된 닉네임입니다."),
+    WRONG_ID(false, 2003, "아이디가 존재하지 않습니다."),
+    OVERLAPPED_PHONENUM_FAIL(false, 2004, "중복된 전화번호입니다."),
+    WRONG_LOGIN(false, 2005, "로그인 정보가 잘못되었습니다."),
+
+    EMPTY_JWT(false, 2100, "JWT를 입력해주세요."),
+    INVALID_TOKEN(false, 2101, "유효하지 않은 토큰입니다."),
 
     // 3000 : Response 오류
     RESPONSE_ERROR(false, 3000, "값을 불러오는데 실패하였습니다."),

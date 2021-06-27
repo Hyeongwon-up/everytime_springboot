@@ -21,7 +21,7 @@ public class Post {
     @Id
     @Column(name = "post_idx")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long post_idx;
 
     @Column(name = "post_title")
     @NotNull

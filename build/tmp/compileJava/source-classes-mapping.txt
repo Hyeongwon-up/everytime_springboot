@@ -1,5 +1,7 @@
-com/example/toy/config/QBaseEntity.java
- com.example.toy.config.QBaseEntity
+com/example/toy/src/comment/repository/CommentRepository.java
+ com.example.toy.src.comment.repository.CommentRepository
+com/example/toy/src/post/service/PostService.java
+ com.example.toy.src.post.service.PostService
 com/example/toy/src/post/repository/PostRepository.java
  com.example.toy.src.post.repository.PostRepository
 com/example/toy/src/user/entity/User.java
@@ -7,26 +9,44 @@ com/example/toy/src/user/entity/User.java
  com.example.toy.src.user.entity.User$UserBuilder
 com/example/toy/config/secret/Secret.java
  com.example.toy.config.secret.Secret
-com/example/toy/src/post/dto/PostPostReqDto.java
- com.example.toy.src.post.dto.PostPostReqDto
+com/example/toy/src/post/entity/Post.java
+ com.example.toy.src.post.entity.Post
+ com.example.toy.src.post.entity.Post$PostBuilder
 com/example/toy/src/post/repository/PostQueryRepository.java
  com.example.toy.src.post.repository.PostQueryRepository
-com/example/toy/config/BaseResponseStatus.java
- com.example.toy.config.BaseResponseStatus
+com/example/toy/src/post/controller/PostController.java
+ com.example.toy.src.post.controller.PostController
 com/example/toy/src/user/dto/PostUserReqDto.java
  com.example.toy.src.user.dto.PostUserReqDto
 com/example/toy/config/swaggerConfig.java
  com.example.toy.config.swaggerConfig
+com/example/toy/src/comment/repository/CommentRepositorySupportImpl.java
+ com.example.toy.src.comment.repository.CommentRepositorySupportImpl
+com/example/toy/src/board/repository/BoardRepositorySupport.java
+ com.example.toy.src.board.repository.BoardRepositorySupport
+com/example/toy/src/user/dto/LoginReqDto.java
+ com.example.toy.src.user.dto.LoginReqDto
 com/example/toy/src/user/repository/UserRepository.java
  com.example.toy.src.user.repository.UserRepository
+com/example/toy/src/board/controller/BoardController.java
+ com.example.toy.src.board.controller.BoardController
+com/example/toy/src/board/dto/PostBoardReqDto.java
+ com.example.toy.src.board.dto.PostBoardReqDto
+com/example/toy/src/comment/entity/QComment.java
+ com.example.toy.src.comment.entity.QComment
+com/example/toy/src/comment/dto/PostCommentResDto.java
+ com.example.toy.src.comment.dto.PostCommentResDto
+com/example/toy/src/board/entity/Board.java
+ com.example.toy.src.board.entity.Board
+ com.example.toy.src.board.entity.Board$BoardBuilder
 com/example/toy/config/BaseEntity.java
  com.example.toy.config.BaseEntity
 com/example/toy/src/user/service/UserService.java
  com.example.toy.src.user.service.UserService
 com/example/toy/src/user/controller/UserController.java
  com.example.toy.src.user.controller.UserController
-com/example/toy/src/post/repository/PostRepositorySupport.java
- com.example.toy.src.post.repository.PostRepositorySupport
+com/example/toy/src/user/entity/QUser.java
+ com.example.toy.src.user.entity.QUser
 com/example/toy/config/BaseResponse.java
  com.example.toy.config.BaseResponse
 com/example/toy/utils/JwtService.java
@@ -35,20 +55,40 @@ com/example/toy/ToyApplication.java
  com.example.toy.ToyApplication
 com/example/toy/config/BaseException.java
  com.example.toy.config.BaseException
-com/example/toy/utils/AES128.java
- com.example.toy.utils.AES128
-com/example/toy/config/QuerydslConfig.java
- com.example.toy.config.QuerydslConfig
-com/example/toy/src/post/service/PostService.java
- com.example.toy.src.post.service.PostService
-com/example/toy/src/user/entity/QUser.java
- com.example.toy.src.user.entity.QUser
-com/example/toy/src/post/entity/Post.java
- com.example.toy.src.post.entity.Post
- com.example.toy.src.post.entity.Post$PostBuilder
 com/example/toy/src/post/entity/QPost.java
  com.example.toy.src.post.entity.QPost
+com/example/toy/config/QuerydslConfig.java
+ com.example.toy.config.QuerydslConfig
+com/example/toy/config/BaseResponseStatus.java
+ com.example.toy.config.BaseResponseStatus
+com/example/toy/src/board/service/BoardService.java
+ com.example.toy.src.board.service.BoardService
+com/example/toy/src/board/entity/QBoard.java
+ com.example.toy.src.board.entity.QBoard
+com/example/toy/src/post/repository/PostRepositorySupport.java
+ com.example.toy.src.post.repository.PostRepositorySupport
+com/example/toy/utils/AES128.java
+ com.example.toy.utils.AES128
+com/example/toy/src/comment/controller/CommentController.java
+ com.example.toy.src.comment.controller.CommentController
+com/example/toy/src/comment/dto/PostCommentReqDto.java
+ com.example.toy.src.comment.dto.PostCommentReqDto
+com/example/toy/src/comment/service/CommentService.java
+ com.example.toy.src.comment.service.CommentService
+com/example/toy/src/comment/repository/CommentQueryRepository.java
+ com.example.toy.src.comment.repository.CommentQueryRepository
+com/example/toy/src/comment/repository/CommentRepositorySupport.java
+ com.example.toy.src.comment.repository.CommentRepositorySupport
+com/example/toy/src/post/dto/PostPostReqDto.java
+ com.example.toy.src.post.dto.PostPostReqDto
+com/example/toy/src/comment/entity/Comment.java
+ com.example.toy.src.comment.entity.Comment
+ com.example.toy.src.comment.entity.Comment$CommentBuilder
+com/example/toy/src/board/repository/BoardRepository.java
+ com.example.toy.src.board.repository.BoardRepository
 com/example/toy/src/post/repository/PostRepositorySupportImpl.java
  com.example.toy.src.post.repository.PostRepositorySupportImpl
-com/example/toy/src/post/controller/PostController.java
- com.example.toy.src.post.controller.PostController
+com/example/toy/src/board/repository/BoardRepositorySupportImpl.java
+ com.example.toy.src.board.repository.BoardRepositorySupportImpl
+com/example/toy/config/QBaseEntity.java
+ com.example.toy.config.QBaseEntity

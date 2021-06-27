@@ -20,8 +20,7 @@ public class PostController {
     @Autowired
     private PostService postService;
     @Autowired
-    PostRepository postRepository;
-    private PostPostReqDto postPostReqDto;
+    private PostRepository postRepository;
 
     @PostMapping("/post")
     @ApiOperation(value = "게시글 생성")
@@ -30,9 +29,9 @@ public class PostController {
         return tmp;
     }
 
-    @GetMapping("/get/{id}")
-    public Post find(@PathVariable Long id){
-        return postService.findPost(id);
+    @GetMapping("/get/{post_idx}")
+    public Post find(@PathVariable Long post_idx){
+        return postService.findPost(post_idx);
     }
 
     @GetMapping("/get2")
@@ -41,14 +40,14 @@ public class PostController {
         return postService.findPostByTitle(title);
     }
 
-    @PutMapping("/put/{id}")
-    public Post modifyTitle(@PathVariable Long id, String title, String content){
-        return postService.modify(id, title, content);
+    @PutMapping("/put/{post_idx}")
+    public Post modifyTitle(@PathVariable Long post_idx, String title, String content){
+        return postService.modify(post_idx, title, content);
     }
 
-    @DeleteMapping("/delete/{id}")
-    public String delete(@PathVariable Long id){
-        postService.delete(id);
+    @DeleteMapping("/delete/{post_idx}")
+    public String delete(@PathVariable Long post_idx){
+        postService.delete(post_idx);
         return "deleted";
     }
 

@@ -30,7 +30,7 @@ public class PostRepositorySupportImpl
         log.debug("finish");
 
         return jpaQueryFactory.selectFrom(post)
-                .orderBy(post.id.desc())
+                .orderBy(post.post_idx.desc())
                 .fetch();
     }
 
@@ -39,7 +39,7 @@ public class PostRepositorySupportImpl
         return Optional.of(jpaQueryFactory
                 .select(post)
                 .from(post)
-                .where(post.id.eq(postId))
+                .where(post.post_idx.eq(postId))
                 .fetchOne()
         );
     }

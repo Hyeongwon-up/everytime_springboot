@@ -17,10 +17,10 @@ public class PostService {
     @Autowired
     private PostRepository postRepository;
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
 
     @Transactional
-    public  String createPost(PostPostReqDto postPostReqDto){
+    public String createPost(PostPostReqDto postPostReqDto){
 
         User user = userRepository.findById(postPostReqDto.getUser_idx()).get();
 
@@ -43,8 +43,8 @@ public class PostService {
 
     //불러오기만 할 수 있게
     @Transactional(readOnly = true)
-    public Post findPost(Long id){
-        Post finded = postRepository.findById(id).get();
+    public Post findPost(Long post_idx){
+        Post finded = postRepository.findById(post_idx).get();
         //.orElseThrow(() => new Exception(error));능
         //
         return finded;
@@ -57,8 +57,8 @@ public class PostService {
     }
 
     @Transactional
-    public Post modify(Long id, String title, String content){
-        Post before = postRepository.findById(id).get();
+    public Post modify(Long post_idx, String title, String content){
+        Post before = postRepository.findById(post_idx).get();
 
         before.update(title, content);
 
@@ -67,8 +67,8 @@ public class PostService {
     }
 
     @Transactional
-    public void delete(Long id){
-        postRepository.deleteById(id);
+    public void delete(Long post_idx){
+        postRepository.deleteById(post_idx);
     }
 
 }
