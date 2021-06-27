@@ -1,6 +1,8 @@
 package com.example.toy.src.post.entity;
 
+import com.example.toy.src.comment.entity.Comment;
 import com.example.toy.src.user.entity.User;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.sun.istack.NotNull;
 import lombok.*;
 import org.hibernate.annotations.DynamicInsert;
@@ -40,6 +42,7 @@ public class Post {
     @Column(name = "status", columnDefinition = "tinyint default 1")
     private Byte status;
 
+    @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name ="user_idx")//FK
     @NotNull
@@ -48,6 +51,8 @@ public class Post {
 //    @OneToMany(mappedBy = "post",cascade = CascadeType.ALL)
 //    private List<Post> postList = new ArrayList<>();
 
+//    @OneToMany(mappedBy = "post")
+//    private List<Comment> commentList = new ArrayList<>();
 
     public void update(String title, String content){
         this.title = title;

@@ -2,8 +2,12 @@ package com.example.toy.src.comment.dto;
 
 import com.querydsl.core.types.dsl.NumberPath;
 import com.querydsl.core.types.dsl.StringPath;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
-public class PostCommentResDto {
+@Getter
+@AllArgsConstructor
+public class GetCommentResDto {
     private Long cmt_idx;
     private String cmt_content;
     private Byte is_blind;

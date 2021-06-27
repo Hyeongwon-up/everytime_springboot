@@ -29,31 +29,34 @@ public class PostController {
     return tmp;
   }
 
-  @GetMapping("/get/{id}")
-  public Post find(@PathVariable Long id) {
-    return postService.findPost(id);
+  @GetMapping("/get/{post_id}")
+  @ApiOperation(value = "게시글 조회")
+  public Post find(@PathVariable Long post_id) {
+    return postService.findPost(post_id);
   }
 
   @GetMapping("/get2")
+  @ApiOperation(value = "해당 제목의 게시글 조회")
   public Post findByTitle(String title) {
-//        log.debug(title);
     return postService.findPostByTitle(title);
   }
 
-  @PutMapping("/put/{id}")
-  public Post modifyTitle(@PathVariable Long id, String title, String content) {
-    return postService.modify(id, title, content);
+  @PutMapping("/put/{post_id}")
+  @ApiOperation(value = "게시글 수정")
+  public Post modifyTitle(@PathVariable Long post_id, String title, String content) {
+    return postService.modify(post_id, title, content);
   }
 
   @DeleteMapping("/delete/{id}")
+  @ApiOperation(value = "게시글 삭제")
   public String delete(@PathVariable Long id) {
     postService.delete(id);
     return "deleted";
   }
 
   @GetMapping("/test")
+  @ApiOperation(value = "게시글 수정")
   public Optional<Post> test(Long postId) {
-    log.debug("go");
     return postRepository.findById2(postId);
   }
 }

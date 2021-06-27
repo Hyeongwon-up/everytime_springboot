@@ -32,6 +32,7 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+    @Autowired
     private JwtService jwtService;
 
     @PostMapping("/users")

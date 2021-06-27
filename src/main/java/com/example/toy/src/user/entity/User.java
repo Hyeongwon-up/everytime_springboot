@@ -2,6 +2,7 @@ package com.example.toy.src.user.entity;
 
 import com.example.toy.config.BaseEntity;
 import com.example.toy.src.post.entity.Post;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 import org.hibernate.annotations.DynamicInsert;
 
@@ -19,7 +20,7 @@ import java.util.List;
 public class User extends BaseEntity {
 
   @Id
-  @Column(name = "user_idx")
+  @JsonManagedReference
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long user_idx;
 

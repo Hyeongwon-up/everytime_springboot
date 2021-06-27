@@ -1,6 +1,7 @@
 package com.example.toy.src.comment.entity;
 
 import com.example.toy.src.post.entity.Post;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.sun.istack.NotNull;
 import lombok.*;
 import org.hibernate.annotations.DynamicInsert;
@@ -25,9 +26,9 @@ public class Comment {
     @NonNull
     private String cmt_content;
 
-    @NonNull
     private Long user_idx;
 
+    @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name ="post_idx")
     @NotNull

@@ -1,5 +1,6 @@
 package com.example.toy.src.comment.service;
 
+import com.example.toy.src.comment.dto.GetCommentResDto;
 import com.example.toy.src.comment.dto.PostCommentReqDto;
 import com.example.toy.src.comment.entity.Comment;
 import com.example.toy.src.comment.repository.CommentRepository;
@@ -20,13 +21,13 @@ public class CommentService {
     PostRepository postRepository;
 
     @Transactional
-    public String createComment(PostCommentReqDto postCommentReqDto){
+    public String createComment(Long userIdx, PostCommentReqDto postCommentReqDto){
 
         Post post = postRepository.findById(postCommentReqDto.getPost_idx()).get();
 
         Comment comment = Comment.builder()
                 .cmt_content(postCommentReqDto.getCmt_content())
-                .user_idx(postCommentReqDto.getUser_idx())
+                .user_idx(userIdx)
                 .post(post)
                 .is_blind(postCommentReqDto.getIs_blind())
                 .build();
@@ -36,8 +37,8 @@ public class CommentService {
         return "Success";
     }
 
-    public List<Comment> findCommentByUser_idx(Long user_idx){
-        List<Comment> commentList = commentRepository.findCommentsByUser_idx(user_idx);
+    public List<GetCommentResDto> findCommentByUser_idx(Long user_idx){
+        List<GetCommentResDto> commentList = commentRepository.findCommentsByUser_idx(user_idx);
         return commentList;
     }
 

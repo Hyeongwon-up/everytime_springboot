@@ -21,19 +21,18 @@ import static com.example.toy.config.BaseResponseStatus.INVALID_TOKEN;
 @Service
 public class JwtService {
 
-  public static String createJwt(long user_idx) { //static??
+  public static String createJwt(long user_idx){ //static??
     Date now = new Date();
     return Jwts.builder()
-      .claim("user_idx", user_idx)
-      .setIssuedAt(now)
-      .signWith(SignatureAlgorithm.HS256, Secret.JWT_SECRET_KEY)
-      .compact();
+            .claim("user_idx", user_idx)
+            .setIssuedAt(now)
+            .signWith(SignatureAlgorithm.HS256, Secret.JWT_SECRET_KEY)
+            .compact();
   }
 
 
   /**
    * Header에서 X-ACCESS-TOKEN 으로 JWT 추출
-   *
    * @return String
    */
   public String getJwt() {
@@ -43,7 +42,6 @@ public class JwtService {
 
   /**
    * JWT에서 userId 추출
-   *
    * @return int
    * @throws BaseException
    */
@@ -60,8 +58,8 @@ public class JwtService {
     Jws<Claims> claims;
     try {
       claims = Jwts.parser()
-        .setSigningKey(Secret.JWT_SECRET_KEY)
-        .parseClaimsJws(accessToken);
+              .setSigningKey(Secret.JWT_SECRET_KEY)
+              .parseClaimsJws(accessToken);
     } catch (Exception ignored) {
       throw new BaseException(INVALID_TOKEN);
     }

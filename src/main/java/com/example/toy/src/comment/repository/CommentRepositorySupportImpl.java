@@ -1,15 +1,13 @@
 package com.example.toy.src.comment.repository;
 
-import com.example.toy.src.comment.dto.PostCommentResDto;
+import com.example.toy.src.comment.dto.GetCommentResDto;
 import com.example.toy.src.comment.entity.Comment;
 import com.example.toy.src.comment.entity.QComment;
-import com.example.toy.src.post.entity.QPost;
+import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
-import com.querydsl.core.types.Projections;
 
 import java.util.List;
-import java.util.Optional;
 
 public class CommentRepositorySupportImpl
     extends QuerydslRepositorySupport implements CommentRepositorySupport {
@@ -23,9 +21,11 @@ public class CommentRepositorySupportImpl
     }
 //
 //    @Override
-    public List<Comment> findCommentsByUser_idx(Long user_idx) {
+    public List<GetCommentResDto> findCommentsByUser_idx(Long user_idx) {
         return jpaQueryFactory
-                .select(comment)
+                .select((Projections.constructor(GetCommentResDto.class,
+                        comment.cmt_idx, comment.cmt_content, comment.is_blind
+                , comment.post.post_idx, comment.status, comment.user_idx )))
                 .from(comment)
                 .where(comment.user_idx.eq(user_idx))
                 .fetch();
