@@ -22,6 +22,9 @@ repositories {
 }
 
 dependencies {
+    //sms 추가해보기
+    implementation group: 'net.nurigo', name: 'javaSDK', version: '2.2'
+
     implementation 'com.querydsl:querydsl-jpa'
 
 //    implementation 'org.springframework.boot:spring-boot-starter-security'

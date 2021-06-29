@@ -5,39 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad0ab045-9a21-44a1-b922-4e94434d262d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/dto/GetAllCommentDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d18febd1-9a5e-452f-bf9a-fdb6f6908c5d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d18febd1-9a5e-452f-bf9a-fdb6f6908c5d.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/sms/controller/SmsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/sms/repository/SmsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/sms/service/SmsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/config/BaseResponseStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/config/BaseResponseStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/controller/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/dto/GetCommentResDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/dto/GetCommentResDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/dto/PostCommentReqDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/dto/PostCommentReqDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/entity/Comment$CommentBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/entity/Comment$CommentBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/entity/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/entity/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/entity/QComment.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/entity/QComment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/repository/CommentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/repository/CommentRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/repository/CommentRepositorySupport.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/repository/CommentRepositorySupport.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/repository/CommentRepositorySupportImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/repository/CommentRepositorySupportImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/toy/src/comment/service/CommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/generated/querydsl/com/example/toy/src/comment/entity/QComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/querydsl/com/example/toy/src/comment/entity/QComment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/config/BaseResponseStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/config/BaseResponseStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/dto/GetCommentResDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/dto/GetCommentResDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/dto/PostCommentReqDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/dto/PostCommentReqDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/entity/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/repository/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/repository/CommentRepositorySupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/repository/CommentRepositorySupport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/repository/CommentRepositorySupportImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/repository/CommentRepositorySupportImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/comment/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +81,9 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -123,6 +101,17 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.ToyApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="toy [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -194,7 +183,8 @@
       <workItem from="1624778403793" duration="592000" />
       <workItem from="1624779270694" duration="7803000" />
       <workItem from="1624787751770" duration="1594000" />
-      <workItem from="1624803060038" duration="8290000" />
+      <workItem from="1624803060038" duration="8475000" />
+      <workItem from="1624973579019" duration="3680000" />
     </task>
     <servers />
   </component>
