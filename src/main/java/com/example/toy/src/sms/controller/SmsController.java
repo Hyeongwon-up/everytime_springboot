@@ -2,6 +2,7 @@ package com.example.toy.src.sms.controller;
 
 import com.example.toy.config.BaseException;
 import com.example.toy.config.BaseResponse;
+import com.example.toy.src.sms.service.SmsService;
 import com.example.toy.src.user.dto.PostUserReqDto;
 import com.example.toy.src.user.service.UserService;
 import com.example.toy.utils.JwtService;
@@ -27,8 +28,9 @@ public class SmsController {
 
     @Autowired
     private JwtService jwtService;
+
     @Autowired
-    private UserService userService;
+    private SmsService smsService;
 
     @GetMapping("/check/sendSMS")
     public String sendSMS(String phoneNumber){
@@ -43,9 +45,9 @@ public class SmsController {
         System.out.println("수신자 번호 : " + phoneNumber);
         System.out.println("인증번호 : " + numStr);
 
-        return "Success";
-//            certificationService.certifiedPhoneNumber(phoneNumber,numStr);
-//            return numStr;
+//        return "Success";
+        smsService.certifiedPhoneNumber(phoneNumber,numStr);
+        return numStr;
 //        } catch (BaseException e) {
 //            return new BaseResponse<>(e.getStatus());
 //        }
