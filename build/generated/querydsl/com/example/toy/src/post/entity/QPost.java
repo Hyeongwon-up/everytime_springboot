@@ -26,9 +26,9 @@ public class QPost extends EntityPathBase<Post> {
 
     public final StringPath content = createString("content");
 
-    public final NumberPath<Long> id = createNumber("id", Long.class);
-
     public final NumberPath<Byte> is_blind = createNumber("is_blind", Byte.class);
+
+    public final NumberPath<Long> post_idx = createNumber("post_idx", Long.class);
 
     public final NumberPath<Byte> status = createNumber("status", Byte.class);
 

@@ -3,6 +3,7 @@ package com.example.toy.src.user.service;
 import com.example.toy.config.BaseException;
 import com.example.toy.config.BaseResponseStatus;
 import com.example.toy.config.secret.Secret;
+import com.example.toy.src.user.dto.LoginReqDto;
 import com.example.toy.src.user.dto.PostUserReqDto;
 import com.example.toy.src.user.dto.SignUpReqDto;
 import com.example.toy.src.user.dto.SignUpResDto;
@@ -15,63 +16,92 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import static com.example.toy.config.BaseResponseStatus.*;
+
+
 @Service
 public class UserService<PostUserResDto> {
-//    private final JwtService jwtService;
 
-  @Autowired
-  private UserRepository userRepository;
+    @Autowired
+    private UserRepository userRepository;
+    private JwtService jwtService;
 
-  //    @Transactional
-  public String createUser(PostUserReqDto postUserReqDto) throws BaseException {
+    @Transactional
+    public String createUser(PostUserReqDto postUserReqDto) throws BaseException, InvalidAlgorithmParameterException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException {
 
-//        String encodingPassword = postUserReqDto.getPassword();
+        if (userRepository.existsUserById(postUserReqDto.getId())) {
+            throw new BaseException(OVERLAPPED_ID_FAIL);
+        }
+        if (userRepository.existsUserByNickname(postUserReqDto.getNickname())) {
+            throw new BaseException(OVERLAPPED_NICKNAME_FAIL);
+        }
 
-//        encodingPassword = new AES128(Secret.USER_INFO_PASSWORD_KEY).encrypt(postUserReqDto.getPassword());
+        String encodingPassword = postUserReqDto.getPassword();
+        encodingPassword = new AES128(Secret.USER_INFO_PASSWORD_KEY).encrypt(postUserReqDto.getPassword());
 
-    User user = User.builder()
-      .user_id(postUserReqDto.getUser_id())
-      .password(postUserReqDto.getPassword())
-//                .password(encodingPassword)
-      .univ_idx(postUserReqDto.getUniv_idx())
-      .univ_year(postUserReqDto.getUniv_year())
-      .nickname(postUserReqDto.getNickname())
-      .user_name(postUserReqDto.getUser_name())
-      .user_email(postUserReqDto.getUser_email())
-      .phone_num(postUserReqDto.getPhone_num())
-      .status(postUserReqDto.getStatus())
-      .build();
+        User user = User.builder()
+                .nickname(postUserReqDto.getNickname())
+                .password(encodingPassword)
+                .phone_num(postUserReqDto.getPhone_num())
+                .univ_idx(postUserReqDto.getUniv_idx())
+                .univ_year(postUserReqDto.getUniv_year())
+                .user_email(postUserReqDto.getUser_email())
+                .id(postUserReqDto.getId())
+                .user_name(postUserReqDto.getUser_name())
+                .build();
 
-    String accessToken = JwtService.createJwt(user.getUser_idx());
+        userRepository.save(user);
 
-    try {
-      userRepository.save(user);
-    } catch (Exception exception) {
-      throw new BaseException(BaseResponseStatus.FAIL);
+        String accessToken = jwtService.createJwt(user.getUser_idx());
+        return accessToken;
     }
 
-    return accessToken;
-  }
+    public SignUpResDto registration(SignUpReqDto signUpReqDto) {
+        User user = User.builder()
+                .id(signUpReqDto.getUser_id())
+                .password(signUpReqDto.getPassword())
+                .univ_idx(signUpReqDto.getUniv_idx())
+                .univ_year(signUpReqDto.getUniv_year())
+                .nickname(signUpReqDto.getNickname())
+                .user_name(signUpReqDto.getUser_name())
+                .user_email(signUpReqDto.getUser_email())
+                .phone_num(signUpReqDto.getPhone_num())
+                .status(signUpReqDto.getStatus())
+                .build();
 
-  public SignUpResDto registration(SignUpReqDto signUpReqDto) {
-    User user = User.builder()
-            .user_id(signUpReqDto.getUser_id())
-            .password(signUpReqDto.getPassword())
-            .univ_idx(signUpReqDto.getUniv_idx())
-            .univ_year(signUpReqDto.getUniv_year())
-            .nickname(signUpReqDto.getNickname())
-            .user_name(signUpReqDto.getUser_name())
-            .user_email(signUpReqDto.getUser_email())
-            .phone_num(signUpReqDto.getPhone_num())
-            .status(signUpReqDto.getStatus())
-            .build();
+        userRepository.save(user);
 
-    userRepository.save(user);
+        SignUpResDto signUpResDto = SignUpResDto.builder()
+                .user_name(signUpReqDto.getUser_name())
+                .build();
 
-    SignUpResDto signUpResDto = SignUpResDto.builder()
-            .user_name(signUpReqDto.getUser_name())
-            .build();
+        return signUpResDto;
+    }
 
-    return signUpResDto;
-  }
+
+
+    /**
+     * 로그인
+     */
+
+    @Transactional
+    public String login(LoginReqDto loginReqDto) throws InvalidAlgorithmParameterException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException, BaseException {
+
+        if (!userRepository.existsUserById(loginReqDto.getId())) {
+            throw new BaseException(WRONG_ID);
+        }
+        String encodingPassword = new AES128(Secret.USER_INFO_PASSWORD_KEY).encrypt(loginReqDto.getPassword());
+
+        User user = userRepository.findUserByIdAndPassword(loginReqDto.getId(), encodingPassword)
+                .orElseThrow(() -> new BaseException(WRONG_LOGIN));
+
+        return jwtService.createJwt(user.getUser_idx());
+    }
+
 }
