@@ -13,6 +13,9 @@ import com.example.toy.src.user.repository.UserRepository;
 import com.example.toy.utils.AES128;
 import com.example.toy.utils.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,7 +29,7 @@ import static com.example.toy.config.BaseResponseStatus.*;
 
 
 @Service
-public class UserService<PostUserResDto> {
+public class UserService implements UserDetailsService {
 
     @Autowired
     private UserRepository userRepository;
@@ -104,4 +107,8 @@ public class UserService<PostUserResDto> {
         return jwtService.createJwt(user.getUser_idx());
     }
 
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return null;
+    }
 }
