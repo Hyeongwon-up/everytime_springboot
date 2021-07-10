@@ -23,10 +23,12 @@ com/example/toy/src/comment/repository/CommentRepositorySupportImpl.java
  com.example.toy.src.comment.repository.CommentRepositorySupportImpl
 com/example/toy/src/user/dto/LoginReqDto.java
  com.example.toy.src.user.dto.LoginReqDto
-com/example/toy/config/QBaseEntity.java
- com.example.toy.config.QBaseEntity
-com/example/toy/src/board/repository/BoardRepository.java
- com.example.toy.src.board.repository.BoardRepository
+com/example/toy/src/kakao/controller/KakaoController.java
+ com.example.toy.src.kakao.controller.KakaoController
+com/example/toy/src/kakao/service/KakaoService.java
+ com.example.toy.src.kakao.service.KakaoService
+com/example/toy/src/kakao/entity/KakaoUser.java
+ com.example.toy.src.kakao.entity.KakaoUser
 com/example/toy/src/board/entity/Board.java
  com.example.toy.src.board.entity.Board
  com.example.toy.src.board.entity.Board$BoardBuilder
@@ -53,8 +55,12 @@ com/example/toy/src/board/service/BoardService.java
  com.example.toy.src.board.service.BoardService
 com/example/toy/utils/AES128.java
  com.example.toy.utils.AES128
+com/example/toy/src/kakao/entity/Properties.java
+ com.example.toy.src.kakao.entity.Properties
 com/example/toy/src/comment/controller/CommentController.java
  com.example.toy.src.comment.controller.CommentController
+com/example/toy/src/kakao/entity/KakaoAccount.java
+ com.example.toy.src.kakao.entity.KakaoAccount
 com/example/toy/src/comment/repository/CommentQueryRepository.java
  com.example.toy.src.comment.repository.CommentQueryRepository
 com/example/toy/src/comment/repository/CommentRepositorySupport.java
@@ -92,6 +98,8 @@ com/example/toy/src/chat/service/ChatService.java
 com/example/toy/src/user/dto/SignUpResDto.java
  com.example.toy.src.user.dto.SignUpResDto
  com.example.toy.src.user.dto.SignUpResDto$SignUpResDtoBuilder
+com/example/toy/src/kakao/entity/Profile.java
+ com.example.toy.src.kakao.entity.Profile
 com/example/toy/src/message/dto/MessageRoomCreateDto.java
  com.example.toy.src.message.dto.MessageRoomCreateDto
  com.example.toy.src.message.dto.MessageRoomCreateDto$MessageRoomCreateDtoBuilder
@@ -147,15 +155,7 @@ com/example/toy/src/comment/service/CommentService.java
 com/example/toy/src/comment/entity/Comment.java
  com.example.toy.src.comment.entity.Comment
  com.example.toy.src.comment.entity.Comment$CommentBuilder
-com/example/toy/src/kakao/entity/Profile.java
- com.example.toy.src.kakao.entity.Profile
-com/example/toy/src/kakao/entity/Properties.java
- com.example.toy.src.kakao.entity.Properties
-com/example/toy/src/kakao/entity/KakaoAccount.java
- com.example.toy.src.kakao.entity.KakaoAccount
-com/example/toy/src/kakao/controller/KakaoController.java
- com.example.toy.src.kakao.controller.KakaoController
-com/example/toy/src/kakao/service/KakaoService.java
- com.example.toy.src.kakao.service.KakaoService
-com/example/toy/src/kakao/entity/KakaoUser.java
- com.example.toy.src.kakao.entity.KakaoUser
+com/example/toy/src/board/repository/BoardRepository.java
+ com.example.toy.src.board.repository.BoardRepository
+com/example/toy/config/QBaseEntity.java
+ com.example.toy.config.QBaseEntity
