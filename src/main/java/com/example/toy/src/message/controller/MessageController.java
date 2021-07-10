@@ -25,29 +25,29 @@ public class MessageController {
 
   @Autowired
   private MessageService messageService;
-
-  @PostMapping("/create")
-  @ApiOperation(value = "새로운 쪽지함생성")
-  public ResponseEntity<MessageRoomCreateDto> create(MessageRoomCreateDto messageRoomCreateDto) {
-    log.info("controller start");
-    log.info("{},{}", messageRoomCreateDto.getReceiverId(), messageRoomCreateDto.getSenderId());
-    return ResponseEntity.ok(messageService.createMessageRoom(messageRoomCreateDto));
-  }
-
-  @GetMapping("/messageroom/{id}")
-  @ApiOperation(value = "userId로 메세지함 불러오기")
-  public List<MessageRoom> readMessageRoom(@PathVariable Long id) {
-    log.info("controller start : {} 로 찾기!!!", id);
-      return messageService.readMessageRoomList(id);
-  }
-
-
-  /**
-   * 메세지 보내깅~
-   */
-  @PostMapping("/{userId}")
-  @ApiOperation("메세지 보내기")
-  public ResponseEntity<Message> sendMessage(@PathVariable(value = "userId") Long fromId, Long toId){
-
-  }
+//
+//  @PostMapping("/create")
+//  @ApiOperation(value = "새로운 쪽지함생성")
+//  public ResponseEntity<MessageRoomCreateDto> create(MessageRoomCreateDto messageRoomCreateDto) {
+//    log.info("controller start");
+//    log.info("{},{}", messageRoomCreateDto.getReceiverId(), messageRoomCreateDto.getSenderId());
+//    return ResponseEntity.ok(messageService.createMessageRoom(messageRoomCreateDto));
+//  }
+//
+//  @GetMapping("/messageroom/{id}")
+//  @ApiOperation(value = "userId로 메세지함 불러오기")
+//  public List<MessageRoom> readMessageRoom(@PathVariable Long id) {
+//    log.info("controller start : {} 로 찾기!!!", id);
+//      return messageService.readMessageRoomList(id);
+//  }
+//
+//
+//  /**
+//   * 메세지 보내깅~
+//   */
+//  @PostMapping("/{userId}")
+//  @ApiOperation("메세지 보내기")
+//  public ResponseEntity<Message> sendMessage(@PathVariable(value = "userId") Long fromId, Long toId){
+//
+//  }
 }

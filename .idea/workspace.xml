@@ -6,14 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="dd36c0df-c21a-4152-8d0d-a9580fa69933" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/entity/Message$MessageBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/entity/Message$MessageBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/entity/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/entity/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/controller/MessageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/controller/MessageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/service/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/toy/src/message/service/MessageService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/entity/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/entity/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/repository/MessageRoomRepositorySupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/repository/MessageRoomRepositorySupport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/repository/MessageRoomRepositorySupportImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/repository/MessageRoomRepositorySupportImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/toy/src/message/service/MessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +140,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ToyApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="everytime_springboot [cleanQuerydslSourcesDir]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -238,6 +245,11 @@
       <workItem from="1623749530493" duration="68000" />
       <workItem from="1624028423106" duration="11390000" />
       <workItem from="1624079385577" duration="1276000" />
+      <workItem from="1625591838597" duration="1214000" />
+      <workItem from="1625647960498" duration="952000" />
+      <workItem from="1625819945318" duration="178000" />
+      <workItem from="1625853382349" duration="293000" />
+      <workItem from="1625885376424" duration="1726000" />
     </task>
     <servers />
   </component>
@@ -258,7 +270,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="?" />
-    <option name="LAST_COMMIT_MESSAGE" value="?" />
+    <MESSAGE value="프로젝트 정리" />
+    <option name="LAST_COMMIT_MESSAGE" value="프로젝트 정리" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
