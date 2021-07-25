@@ -28,9 +28,11 @@ public class QComment extends EntityPathBase<Comment> {
 
     public final NumberPath<Byte> isBlind = createNumber("isBlind", Byte.class);
 
+    public final NumberPath<Long> parentCmtIdx = createNumber("parentCmtIdx", Long.class);
+
     public final com.example.toy.src.post.entity.QPost post;
 
-    public final NumberPath<Long> replyIdx = createNumber("replyIdx", Long.class);
+    public final NumberPath<Long> seq = createNumber("seq", Long.class);
 
     public final NumberPath<Byte> status = createNumber("status", Byte.class);
 

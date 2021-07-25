@@ -10,10 +10,8 @@ import java.util.Optional;
 
 @Repository
 public interface CommentRepositorySupport {
-
     List<GetCommentResDto> findCommentByUserIdx(Long userIdx);
-
-
     List<GetAllCommentDto> findAllByPostIdx(Long postIdx);
 
+    Long findLatestSeq(Long parentCmtIdx);
 }

@@ -3,11 +3,12 @@ package com.example.toy.src.comment.service;
 import com.example.toy.config.BaseException;
 import com.example.toy.src.comment.dto.GetAllCommentDto;
 import com.example.toy.src.comment.dto.GetCommentResDto;
-import com.example.toy.src.comment.dto.PostCommentReqDto;
+import com.example.toy.src.comment.dto.PostCommentDto;
 import com.example.toy.src.comment.entity.Comment;
 import com.example.toy.src.comment.repository.CommentRepository;
 import com.example.toy.src.post.entity.Post;
 import com.example.toy.src.post.repository.PostRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,6 +18,7 @@ import java.util.List;
 import static com.example.toy.config.BaseResponseStatus.*;
 
 @Service
+@Slf4j
 public class CommentService {
 
     @Autowired
@@ -25,33 +27,42 @@ public class CommentService {
     PostRepository postRepository;
 
     @Transactional
-    public String createComment(Long userIdx, PostCommentReqDto postCommentReqDto) throws BaseException {
+    public String createComment(PostCommentDto reqDto) throws BaseException {
 
         Post post;
-        long replyIdx;
+        Long parentCmtIdx;
+        Long seq;
 
-        if(postCommentReqDto.getPostIdx() != null && postCommentReqDto.getPostIdx() > 0){
-            // 댓글일 경우
-            post = postRepository.findById(postCommentReqDto.getPostIdx()).get();
-            replyIdx = 0;
-        } else if(postCommentReqDto.getReplyIdx() != null && postCommentReqDto.getReplyIdx() > 0) {
-            // 대댓글일 경우
-            if (!commentRepository.existsById(postCommentReqDto.getReplyIdx())) {
-                throw new BaseException(NOT_EXIST_COMMENT);
-            }
-            Comment findedComment = commentRepository.findCommentByIdx(postCommentReqDto.getReplyIdx()).get();
-            post = findedComment.getPost();
-            replyIdx = postCommentReqDto.getReplyIdx();
-        }else {
+        // postIdx가 있는지에 대한 유효성 검사 X
+        if(reqDto.getPostIdx() != null && reqDto.getPostIdx() > 0){
+            // 댓글일 경우(postIdx가 들어오기만 하면 댓글로 판단)
+            post = postRepository.findById(reqDto.getPostIdx()).get();
+            parentCmtIdx = 0L;
+            seq = 1L;
+
+        } else if(reqDto.getParentCmtIdx() != null && reqDto.getParentCmtIdx() > 0) {
+            // 대댓글일 경우(그게 아니라면 대댓글로 판단)
+//            if (!commentRepository.existsById(reqDto.getParentCmtIdx())) {
+//                throw new BaseException(NOT_EXIST_COMMENT);
+//            }
+//            post = commentRepository.findCommentB(reqDto.getPostIdx()).get();
+            parentCmtIdx = reqDto.getParentCmtIdx();
+            post = commentRepository.findCommentByIdx(parentCmtIdx).get().getPost();
+            seq = commentRepository.findLatestSeq(parentCmtIdx);
+        } else {
             throw new BaseException(NOT_ENTERED_COMMENT);
         }
 
-        Comment comment = Comment.builder()
-                .content(postCommentReqDto.getContent())
-                .userIdx(userIdx)
+
+        Comment comment = Comment
+                .builder()
+                .content(reqDto.getContent())
+                .userIdx(reqDto.getUserIdx())
                 .post(post)
-                .replyIdx(replyIdx)
-                .isBlind(postCommentReqDto.getIsBlind())
+                .parentCmtIdx(parentCmtIdx)
+                .seq(seq)
+                .isBlind(reqDto.getIsBlind())
+                .status((byte) 1)
                 .build();
 
         commentRepository.save(comment);
@@ -64,8 +75,9 @@ public class CommentService {
         return commentList;
     }
 
-    public List<GetAllCommentDto> getAllCommentsByPostIdx(Long postIdx){
-        List<GetAllCommentDto> commentList = commentRepository.findAllByPostIdx(postIdx);
+    public List<GetAllCommentDto> getAllCommentsByPostIdx(Long post_idx){
+        List<GetAllCommentDto> commentList = commentRepository.findAllByPostIdx(post_idx);
+        log.info(String.valueOf(commentList));
         return commentList;
     }
 
